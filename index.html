@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+     <link rel="stylesheet" href="style.css">
+    <title>Piedra, Papel o Tijeras</title>
+  </head>
 <body>
-    
+  <header>
+    <section class="contadores">
+    <p class="contadorUsuario" id="contadorUsuario">0</p> <p>Contador Usuario</p>
+    <p class="contadorMaquina" id="contadorMaquina">0</p> <p>Contador Maquina</p>
+    <!--<input type="text" id="input"> Score Usuario: <span id="result"></span>-->
+    <!--<input type="text" id="input2"> Score Maquina: <span id="result2"></span>-->
+    </section>
+		<h1>Piedra, Papel o Tijeras</h1>
+    </header>
+    <main>
+      <article>
+        <button popovertarget="mensaje" popovertargetaction="toggle">Reglas del juego</button>
+        <div id="mensaje" popover="manual">
+          <ul>
+            <li>La piedra aplasta la tijera. (Gana la piedra.)</li>
+            <li>La tijera corta el papel. (Gana la tijera.)</li>
+            <li>El papel envuelve la piedra. (Gana el papel.)</li>
+            <li>En caso de empate, se juega otra vez  hasta que uno de los jugadores gana con tres puntos.</li>
+            <button popovertarget="mensaje" popovertargetaction="hide">Volver</button>
+          </ul>
+        </div>
+      </article>
+      <button onclick="temporizador()">PLAY</button> 
+      <p id="tiempo"></p>
+      <div class="transicion">
+      <img src="./img/piedraIz.png" class="img1" alt="imagen-seleccion" width="400" height="400" >
+      <img src="./img/tijerasDr.png" class="img2" alt="imagen-seleccion2" width="400" height="400" >
+    </div>
+    </main>	
+    <footer class="seleccion-figura">
+      <button id="agregar" class="piedra">Piedra</button>
+      <button id="1" class="papel">Papel</button>
+      <button id="2" class="tijeras">Tijeras</button>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="./src/js/events.js" type="module"></script>
 </body>
 </html>
