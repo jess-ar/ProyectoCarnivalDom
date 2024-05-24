@@ -8,21 +8,16 @@
   </head>
 <body>
   <header>
-   <section class="botoncitos">
-<button>Cerrar</button>
-<button>Sonido</button>
-</section>
+    <section class="contadores">
+    <p id="contadorUsuario">0</p> <p>Contador Usuario</p>
+    <p id="contadorMaquina">0</p> <p>Contador Maquina</p>
+    <!--<input type="text" id="input"> Score Usuario: <span id="result"></span>-->
+    <!--<input type="text" id="input2"> Score Maquina: <span id="result2"></span>-->
+    </section>
 		<h1>Piedra, Papel o Tijeras</h1>
     </header>
     <main>
-      <article>         
-        <div class="iniciar">
-          <button id="play" href="juego.html" >PLAY</button> 
-          <p id="tiempo"></p>
-        </div>
-    </article>
-      </main>	
-    <footer id="seleccionesUser" class="seleccion-figura">
+      <article>
         <button popovertarget="mensaje" popovertargetaction="toggle">Reglas del juego</button>
         <div id="mensaje" popover="manual">
           <ul>
@@ -33,6 +28,20 @@
             <button popovertarget="mensaje" popovertargetaction="hide">Volver</button>
           </ul>
         </div>
+      </article>
+    <div class="manos">
+      <img src="./img/piedraIz.png" class="img1" alt="imagen-seleccion" width="400" height="400" >
+        <div class="iniciar">
+          <button id="play">PLAY</button> 
+          <p id="tiempo"></p>
+        </div>
+      <img src="./img/tijerasDr.png" class="img2" alt="imagen-seleccion2" width="400" height="400" >
+    </div>
+    </main>	
+    <footer id="seleccionesUser" class="seleccion-figura">
+      <button id="0" value="0" class="piedra">Piedra</button>
+      <button id="1" value="1" class="papel">Papel</button>
+      <button id="2" value="2" class="tijeras">Tijeras</button>
     </footer>
     <script src="src/script.js" type="module" ></script>
     <script src="src/events.js" type="module"></script>
