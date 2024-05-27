@@ -14,7 +14,7 @@ html{
     width: 100%;
     height: auto;
     background-image: url(./Images/PPT_ELEMENTOS-01-mobile.png);
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
 }
 a{
@@ -23,22 +23,30 @@ a{
 
 .controls{
     display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
+    justify-content: space-around;
+    gap: 600px;
+    align-items: center;
+    margin-top: 20px;
+
+
 }
 #icon{
-    font-size: 24px;
-    width:100px;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
     background-color: #F6A347;
     border-radius: 50%;
-    padding: 15px;
-    margin: 20px;
+    padding: 10px;
+    margin: 0px;
     border: #EED0B2 3px solid;
 }
 
 img{
     width: 376px;
-
+    height: auto;
 }
 .logo{
     margin-top: 30px;
@@ -46,9 +54,22 @@ img{
     justify-content: center;
     align-items: center;
     height: 176px;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
+.info{
+    width: 5%;
+    margin-left: 30px;
+    /* margin-right: 120px; */
+    display: flex;
+    
 }
 .input-button{
+    width: 90%;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -56,7 +77,6 @@ img{
 
 form{
     display: flex;
-    display: inline-block;
     justify-content: center;
 }
 .input-player{
@@ -74,25 +94,28 @@ form{
 }
 
 .play-father{
-    width: 14%;
     display: flex;
-    display: inline-block;
+    display: block;
     align-items: center;
     text-align: center;
     background-color: #F6A347;
     border-radius: 30px;
     border: #EED0B2 3px solid;
+    width: 123px ;
+    height:41px;
 }
 .play{
-    text-shadow: gray;
     border:none;
     flex: 1;
     flex-grow: 1;
+    align-items: center;
     font-size: 32px;
     border-radius: 20px;
     background: linear-gradient(#EB1A7E,#010A74);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.5px #F6A347;
     filter: drop-shadow(3px 2px 4px #00000091);
 }
+
+
