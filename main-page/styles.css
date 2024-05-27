@@ -1,0 +1,98 @@
+*{
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    width: 100%;
+}
+.bg{
+    width: 100%;
+    height: auto;
+    background-image: url(./Images/PPT_ELEMENTOS-01-mobile.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+a{
+    color: #010A74;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+#icon{
+    font-size: 24px;
+    width:100px;
+    background-color: #F6A347;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 20px;
+    border: #EED0B2 3px solid;
+}
+
+img{
+    width: 376px;
+
+}
+.logo{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 176px;
+
+}
+.input-button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+form{
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+}
+.input-player{
+    text-align: center;
+    font-size: 20px;
+    width: 274px;
+    height: 41px;
+    display: flex;
+    background-color: #EED0B2;
+    border: #F6A347 3px solid;
+    border-radius: 32px;
+}
+.input-player::placeholder{
+    color: #9614B5;
+}
+
+.play-father{
+    width: 14%;
+    display: flex;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    background-color: #F6A347;
+    border-radius: 30px;
+    border: #EED0B2 3px solid;
+}
+.play{
+    text-shadow: gray;
+    border:none;
+    flex: 1;
+    flex-grow: 1;
+    font-size: 32px;
+    border-radius: 20px;
+    background: linear-gradient(#EB1A7E,#010A74);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke: 1.5px #F6A347;
+    filter: drop-shadow(3px 2px 4px #00000091);
+}
