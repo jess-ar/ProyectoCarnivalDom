@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Piedra, Papel o Tijeras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+  </head>
+<body>
+  <header>
+   <section class="config">
+    <button class="botoncitos cerrar">X</button>
+    <a href="#" class="botoncitos sonido"><img src="/img/ico/sound.svg" alt="sonido" class="iconos"></a>
+</section>
+    </header>
+    <main>
+      <article>         
+        <div class="logo">
+          <img src="/img/logo.png" alt="logo" width="700px" height="350px">
+        </div>
+        <section class="iniciar">
+          <input class="nombre-jugador" type="Nombre del jugador" width="274px" height="41px">
+          <button onclick="location.href='juego.html'" class="play" width="123px" height="41px">PLAY</button> 
+        </section>
+    </article>
+      </main>	
+    <footer id="seleccionesUser" class="seleccion-figura">
+        <button popovertarget="mensaje" popovertargetaction="toggle" class="botoncitos reglas"><img src="/img/ico/info.svg" alt="reglas" class="iconos"></button>
+        <div id="mensaje" popover="manual">
+          <h1>REGLAS DEL JUEGO</h1>
+          <ul>
+            <li>La piedra aplasta la tijera.</li>
+            <li>La tijera corta el papel.</li>
+            <li>El papel envuelve la piedra.</li>
+            <li>En caso de empate, se juega otra vez.</li>
+            <button popovertarget="mensaje" popovertargetaction="hide" class="botoncitos cerrar cerrarppv">X</button>
+          </ul>
+        </div>
+    </footer>
+    <script src="src/script.js" type="module" ></script>
+    <script src="src/events.js" type="module"></script>
+</body>
+</html>
