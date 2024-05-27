@@ -1,0 +1,180 @@
+*{
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  width: 100%;
+}
+
+
+a{
+  color: #010A74;
+}
+
+.controls{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -10px;
+}
+  
+
+#icon{
+  display: inline-block;
+  font-size: 18px;
+  width: 50px;
+  height: 50px; 
+  background-color: #F6A347;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: -150px;
+  border: 2px solid #EED0B2;
+  text-align: center;
+  justify-content: center;
+}
+
+img{
+  width: 35%;
+  height: 35%;
+
+}
+/*estilos header*/
+h1{
+  font-weight: bold;
+  font-size: 64px;
+  color:#E67901;
+  display: flex;
+  justify-content: space-around;
+}
+p, h1{ 
+  -webkit-text-stroke: 0.2px #9614B5;
+}
+.buttons{
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  margin: 0;
+  border: 2px solid #EED0B2;
+  padding: 0;
+  display:inline-block;
+  position:center;
+  cursor: pointer;
+}
+.score{
+  display: flex;
+  justify-content: space-between;
+  color: #EED0B2;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 30px;
+  }
+.scoreComputer{
+  display: flex;
+  justify-content:flex-start;
+  gap: 19px;
+  margin-left: 50px;
+}
+.scoreUser{
+  display: flex;
+  justify-content:flex-end;
+  gap: 19px;
+  margin-right: 50px;
+}
+
+/*estilos main*/
+
+.bg{
+  width: 100%%;
+  height: auto;
+  background-image: url(./img/PPT_ELEMENTOS-01-mobile.png);
+  background-size:content;
+  background-repeat: no-repeat;
+}
+
+.hands{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+.start{
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+.player-name{
+background-color: #EED0B2;
+border: 2px solid #F6A347;
+border-radius: 20%;
+}
+
+.piedra, .papel,
+.tijeras{
+background-color:#188CCC; 
+}
+
+.selectsUser {
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+  margin-top: -70px; 
+}
+
+.result, .time{
+display: flex;
+justify-content: center;
+  font-size: 150px;
+  margin-top: 300px;
+  margin-bottom: 0;  
+  color:#F6A347; 
+  color: radial-gradient(#E67901, #F6A347);
+  -webkit-text-stroke: 3px #9614B5;
+}
+/*estilos footer*/
+[popover] {
+  width: 727px;
+  background: #EED0B2;
+  border-bottom: 5px solid #F6A347;
+  border-radius: 20%;
+  color: #9614B5;
+  font-size: 32px;  
+  padding: 40px;     
+}
+
+.config-result{
+  display: flex;
+  justify-content: center;
+  gap:100px;
+  }
+
+.close, .sound, .reset, .home, .rules{
+background-color:#F6A347 ;
+color:darkblue;
+font-weight: bold;
+}
+
+.reglas{
+  margin: 35px;
+}
+.cerrarppv{
+  margin-top: 30px;
+ margin-left: 300px;
+}
+/*.tiempo{ //es para un radio de desenfoque
+  border-radius:50%;
+  text-shadow:
+  3px 3px 2px #EED0B2,
+  -3px 3px 2px #EED0B2,
+  -3px -3px 0 #EED0B2,
+  3px -3px 0 #EED0B2,
+} */
+
