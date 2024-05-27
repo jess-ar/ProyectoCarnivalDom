@@ -66,7 +66,7 @@ footer{
     margin-left: 30px;
     /* margin-right: 120px; */
     display: flex;
-    
+
 }
 .input-button{
     width: 90%;
@@ -118,4 +118,37 @@ form{
     filter: drop-shadow(3px 2px 4px #00000091);
 }
 
+/* popover */
+
+.botoncitos {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0;
+    border: 2px solid #eed0b2;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  [popover] {
+    width: 727px;
+    background: #eed0b2;
+    border-bottom: 5px solid #f6a347;
+    border-radius: 20%;
+    color: #9614b5;
+    font-size: 32px;
+    padding: 40px;
+  }
+  .cerrarppv {
+    margin-top: 30px;
+    margin-left: 300px;
+  }
+  
+  .cerrar{
+    background-color: #f6a347;
+    color: darkblue;
+    font-weight: bold;
+  }
 
