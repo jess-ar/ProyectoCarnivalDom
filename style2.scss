@@ -1,0 +1,225 @@
+/*  VARIABLES COLORES  */
+$cream-color: #EED0B2;
+$yellow-color: #F6A347;
+$blue-color: #188CCC;
+$pink-color: #EB1A7E;
+$purple-color: #9614B5;
+$dark-blue-color: #010A74;
+
+/* Se puede cambiar to bottom a otras direcciones como to right (de izquierda a derecha), to left (de derecha a izquierda), to top (de abajo hacia arriba) o especificar un ángulo como 45deg. */
+$gradient-1: linear-gradient(to right, #F6A347 0%, #E67900 50%, #F6A347 100%);
+$gradient-2: linear-gradient(to bottom, #F6A347 0%, #EF5168 62%, #EB1A7E 70%, #F6A347 100%);
+$gradient-3: linear-gradient(to right, #EB1A7E 0%, #010A74 100%);
+$gradient-4: radial-gradient(closest-side, #F6A347 0%, #E67900 50%, #F6A347 100%); 
+/* El degradado radial con forma de diamante, se puede usar radial-gradient con la opción farthest-corner para que ocupe todo el contenedor. Sin embargo, CSS no tiene una opción específica para un degradado de "diamante", pero se puede lograr un efecto similar usando un degradado radial con una forma de "farthest-corner" o "closest-side". */
+
+
+/*  MIXINS TIPOGRAFÍA */
+@mixin text-style-1 {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    background: $gradient-4;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $purple-color;
+    list-style: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin text-style-2 {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    background: $gradient-3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid;
+    border-image: $gradient-2 1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin text-style-3 {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: $cream-color;
+    border: 1px solid $purple-color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin text-style-4 {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $purple-color;
+}
+
+
+
+
+/*estilos header*/
+h1 {
+    font-weight: bold;
+    font-size: 64px;
+    color: #e67901;
+    display: flex;
+    justify-content: space-around;
+}
+p,
+h1 {
+    -webkit-text-stroke: 0.2px #9614b5;
+}
+.botoncitos {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0;
+    border: 2px solid #eed0b2;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+
+    cursor: pointer;
+}
+.contadores {
+    display: flex;
+    justify-content: space-between;
+    color: #eed0b2;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.contadorUsuario {
+    display: flex;
+    justify-content: flex-start;
+    gap: 19px;
+    margin-right: 50px;
+}
+.contadorMaquina {
+    display: flex;
+    justify-content: flex-end;
+    gap: 19px;
+    margin-left: 50px;
+}
+/*estilos main*/
+body {
+    background-image: url("img/fondo.png");
+    background-size: 1133px;
+    font-family: "Luckiest Guy";
+}
+
+.manos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.iniciar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nombre-jugador {
+    background-color: #eed0b2;
+    border: 2px solid #f6a347;
+    border-radius: 20%;
+}
+
+.play {
+    border-radius: 20%;
+    background-color: #f6a347;
+    border: 2px solid #f6a347;
+    padding-inline: 0;
+    padding-block: 0;
+}
+
+.piedra,
+.papel,
+.tijeras {
+    background-color: #188ccc;
+}
+
+.seleccionesUser {
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+    margin-top: 40px;
+}
+
+.resultado,
+.tiempo {
+    display: flex;
+    justify-content: center;
+    font-size: 150px;
+    margin-top: 300px;
+    margin-bottom: 0;
+    color: #f6a347;
+    color: radial-gradient(#e67901, #f6a347);
+    -webkit-text-stroke: 3px #9614b5;
+}
+
+/*estilos footer*/
+[popover] {
+    width: 727px;
+    background: #eed0b2;
+    border-bottom: 5px solid #f6a347;
+    border-radius: 20%;
+    color: #9614b5;
+    font-size: 32px;
+    padding: 40px;
+}
+
+.config {
+    display: flex;
+    justify-content: center;
+    gap: 950px;
+    margin-top: 40px;
+}
+
+.config-result {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.cerrar,
+.sonido,
+.reiniciar,
+.home,
+.reglas {
+    background-color: #f6a347;
+    color: darkblue;
+    font-weight: bold;
+}
+
+.iconos {
+    margin: 12px;
+}
+
+.reglas {
+    margin: 35px;
+}
+
+.cerrarppv {
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+/*.tiempo{ //es para un radio de desenfoque
+    border-radius:50%;
+    text-shadow:
+    3px 3px 2px #EED0B2,
+    -3px 3px 2px #EED0B2,
+    -3px -3px 0 #EED0B2,
+    3px -3px 0 #EED0B2,
+  } */
