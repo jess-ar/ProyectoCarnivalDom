@@ -13,7 +13,7 @@ html{
 .bg{
     width: 100%;
     height: auto;
-    background-image: url(./Images/PPT_ELEMENTOS-01-mobile.png);
+    background-image: url(./main-page/Images/PPT_ELEMENTOS-01-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
