@@ -104,6 +104,11 @@ form{
     width: 123px ;
     height:41px;
 }
+.play-father:hover{
+    background-color: #f6bc7a;
+    cursor: pointer;
+
+}
 .play{
     padding-bottom: 15px;
     border:none;
@@ -117,6 +122,9 @@ form{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.5px #F6A347;
     filter: drop-shadow(3px 2px 4px #00000091);
+}
+.play:hover{
+    cursor: pointer;
 }
 
 /* popover */
