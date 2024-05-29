@@ -71,13 +71,13 @@ html {
 .bg {
   width: 100%;
   height: auto;
-  background-image: url(./main-page/Images/PPT_ELEMENTOS-01-mobile.png);
+  background-image: url(/main-page/Images/PPT_ELEMENTOS-01-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 a {
-  color: #010A74;
+  color: #010a74;
 }
 
 .controls {
@@ -95,11 +95,15 @@ a {
   width: 50px;
   height: 50px;
   font-size: 21px;
-  background-color: #F6A347;
+  background-color: #f6a347;
   border-radius: 50%;
   padding: 10px;
   margin: 0px;
-  border: #EED0B2 3px solid;
+  border: #eed0b2 3px solid;
+}
+
+.fa-solid fa-volume-high:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='m22 15l-6-6m6 0l-6 6'/%3E%3Cpath stroke-linejoin='round' d='M2 14.959V9.04C2 8.466 2.448 8 3 8h3.586a.98.98 0 0 0 .707-.305l3-3.388c.63-.656 1.707-.191 1.707.736v13.914c0 .934-1.09 1.395-1.716.726l-2.99-3.369A.98.98 0 0 0 6.578 16H3c-.552 0-1-.466-1-1.041'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 img {
@@ -113,7 +117,6 @@ img {
   justify-content: center;
   align-items: center;
   height: 176px;
-  animation: rubberBand;
 }
 
 footer {
@@ -124,9 +127,8 @@ footer {
 
 .info {
   width: 5%;
-  margin-left: 30px;
+  margin-left: 57px;
   /* margin-right: 120px; */
-  display: flex;
 }
 
 .input-button {
@@ -147,13 +149,13 @@ form {
   width: 274px;
   height: 41px;
   display: flex;
-  background-color: #EED0B2;
-  border: #F6A347 3px solid;
+  background-color: #eed0b2;
+  border: #f6a347 3px solid;
   border-radius: 32px;
 }
 
 .input-player::placeholder {
-  color: #9614B5;
+  color: #9614b5;
 }
 
 .play-father {
@@ -161,11 +163,16 @@ form {
   display: block;
   align-items: center;
   text-align: center;
-  background-color: #F6A347;
+  background-color: #f6a347;
   border-radius: 30px;
-  border: #EED0B2 3px solid;
+  border: #eed0b2 3px solid;
   width: 123px;
   height: 41px;
+}
+
+.play-father:hover {
+  background-color: #f6bc7a;
+  cursor: pointer;
 }
 
 .play {
@@ -176,53 +183,126 @@ form {
   align-items: center;
   font-size: 32px;
   border-radius: 20px;
-  background: linear-gradient(to right, #EB1A7E 0%, #010A74 100%);
+  background: linear-gradient(#eb1a7e, #010a74);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px #F6A347;
+  -webkit-text-stroke: 1.5px #f6a347;
   filter: drop-shadow(3px 2px 4px rgba(0, 0, 0, 0.568627451));
 }
 
+.play:hover {
+  cursor: pointer;
+}
+
 /* popover */
-/* .botoncitos {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0;
-    border: 2px solid #eed0b2;
-    padding: 0;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-  } */
 [popover] {
   width: 727px;
   background: #EED0B2;
   border-bottom: 5px solid #F6A347;
   border-radius: 20%;
-  color: #9614b5;
+  color: #9614B5;
   font-size: 32px;
   padding: 40px;
+  margin-left: auto; /* Centra el botón horizontalmente */
+  margin-right: auto; /* Centra el botón horizontalmente */
 }
 
-.closeppv {
-  margin-top: 30px;
-  margin-left: 300px;
-  border: #9614B5 1px solid;
-}
-
-button {
+#rules {
   border: none;
-  border-radius: 100%;
-  height: 50px;
+  background-color: transparent; /*  esto es porque me salia un fondo blanco con un borde negro detrás del container-rules  */
 }
 
-.close {
+.button-rules-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
   background-color: #F6A347;
-  width: 20px;
-  height: 20px;
+  border-radius: 50px;
+  border: 2px solid #EED0B2;
+  margin-left: 60px;
+  cursor: pointer;
+  bottom: 30px; /* A 30px desde la parte inferior del contenedor */
+  left: 30px; /* A 30px desde la parte izquierda del contenedor */
+  /* para que el svg se ajuste al tamaño del botón */
+}
+.button-rules-info svg {
+  width: 80%;
+  height: 80%;
+}
+
+.container-rules {
+  /*  container caja de reglas */
+  height: 176px;
+  width: 450px;
+  height: 260px;
+  padding: 30px;
+  background-color: #EED0B2;
+  border: 2px solid #F6A347;
+  border-radius: 20px;
+}
+
+h1 {
+  /*  REGLAS DEL JUEGO */
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  background: radial-gradient(closest-side, #F6A347 0%, #E67900 50%, #F6A347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #9614B5;
+  list-style: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+li {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #9614B5;
+  margin-left: 20px;
+}
+
+.button-rules-x {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra verticalmente el contenido */
+  margin-left: auto; /* Centra el botón horizontalmente */
+  margin-right: auto; /* Centra el botón horizontalmente */
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #F6A347;
   color: #010A74;
+  border-radius: 50px;
+  border: 2px solid #EED0B2; /* Borde de color crema */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  outline: none; /* Elimina el contorno al enfocarse */
+  /* Ajusta la altura de la línea para centrar verticalmente el texto */
+  line-height: 10px;
+  /* Estilo de texto */
+  font-size: 20px;
   font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo para el efecto hover */
+.button-rules-volver:hover {
+  opacity: 0.8; /* Reduce la opacidad al pasar el cursor sobre el botón */
+}
+
+.button-rules-volver a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 5px 5px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
