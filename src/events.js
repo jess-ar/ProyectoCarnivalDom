@@ -1,13 +1,14 @@
-import {add, juego, temporizador} from './script.js'
-/*let addBoton = document.getElementById("0");
-addBoton.addEventListener("click", add)*/
+import { game, removeEffect, timmer} from './script.js'
 
-let tempBoton = document.getElementById("play");
-tempBoton.addEventListener("click", temporizador)
+/*let tempBoton = document.getElementById("play");
+tempBoton.addEventListener("click", timmer)*/
 
-let piedraBoton = document.getElementById("0");
-piedraBoton.addEventListener("click", juego)
-let papelBoton = document.getElementById("1");
-papelBoton.addEventListener("click", juego)
-let tijerasBoton = document.getElementById("2");
-tijerasBoton.addEventListener("click", juego)
+let piedraButton = document.getElementById("0");
+piedraButton.addEventListener("click", function(){game(0)})
+let papelButton = document.getElementById("1");
+papelButton.addEventListener("click", function(){game(1)})
+let tijerasButton = document.getElementById("2");
+tijerasButton.addEventListener("click", function(){game(2)})
+
+let tiButton=document.getElementById("effect")
+tiButton.addEventListener("click", removeEffect);

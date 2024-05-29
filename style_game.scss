@@ -148,7 +148,7 @@ p, h1{
 
 /*estilos footer*/
 
-[popover] {
+[popover], #effect {
   width: 727px;
   background: $cream-color;
   border-bottom: 5px solid $yellow-color;
@@ -179,6 +179,13 @@ p, h1{
   margin-left: 300px;
 }
 
+#effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;  
+}
 /*.tiempo{ //es para un radio de desenfoque
   border-radius:50%;
   text-shadow:
