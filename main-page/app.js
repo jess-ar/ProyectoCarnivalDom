@@ -6,12 +6,11 @@ function closeGame(){
     let cerrar = document.getElementsByClassName('fa-solid fa-xmark')
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Crear un nuevo objeto Audio
+window.addEventListener('load', function() {
     var audio = new Audio('game-music-loop-3-144252.mp3');
-    
-    // Reproducir el sonido
-    audio.play().catch(function(error) {
+    audio.play().then(function() {
+        console.log("El sonido se está reproduciendo.");
+    }).catch(function(error) {
         console.error("Error al reproducir el sonido:", error);
     });
 });
