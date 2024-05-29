@@ -1,3 +1,60 @@
+@charset "UTF-8";
+/*  VARIABLES COLORES  */
+/* Se puede cambiar to bottom a otras direcciones como to right (de izquierda a derecha), to left (de derecha a izquierda), to top (de abajo hacia arriba) o especificar un ángulo como 45deg. */
+/* El degradado radial con forma de diamante, se puede usar radial-gradient con la opción farthest-corner para que ocupe todo el contenedor. Sin embargo, CSS no tiene una opción específica para un degradado de "diamante", pero se puede lograr un efecto similar usando un degradado radial con una forma de "farthest-corner" o "closest-side". */
+/*  MIXINS TIPOGRAFÍA */
+* {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+}
+
+.result, .time {
+  display: flex;
+  justify-content: center;
+  font-size: 150px;
+  margin-top: 300px;
+  margin-bottom: 0;
+  color: #F6A347;
+  color: radial-gradient(closest-side, #F6A347 0%, #E67900 50%, #F6A347 100%);
+  -webkit-text-stroke: 3px #9614B5;
+}
+
+.config-result {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.buttons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+  border: 2px solid #EED0B2;
+  padding: 0;
+  display: inline-block;
+  position: center;
+  cursor: pointer;
+}
+
+.reset, .home {
+  background-color: #F6A347;
+  color: #010A74;
+  font-weight: bold;
+}
+
+.rules {
+  margin: 35px;
+}
+
 * {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
@@ -56,6 +113,7 @@ img {
   justify-content: center;
   align-items: center;
   height: 176px;
+  animation: rubberBand;
 }
 
 footer {
@@ -118,7 +176,7 @@ form {
   align-items: center;
   font-size: 32px;
   border-radius: 20px;
-  background: linear-gradient(#EB1A7E, #010A74);
+  background: linear-gradient(to right, #EB1A7E 0%, #010A74 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1.5px #F6A347;
@@ -139,18 +197,18 @@ form {
   } */
 [popover] {
   width: 727px;
-  background: #eed0b2;
-  border-bottom: 5px solid #f6a347;
+  background: #EED0B2;
+  border-bottom: 5px solid #F6A347;
   border-radius: 20%;
   color: #9614b5;
   font-size: 32px;
   padding: 40px;
 }
 
-.cerrarppv {
+.closeppv {
   margin-top: 30px;
   margin-left: 300px;
-  border: #9614b5 1px solid;
+  border: #9614B5 1px solid;
 }
 
 button {
@@ -159,11 +217,11 @@ button {
   height: 50px;
 }
 
-.cerrar {
-  background-color: #f6a347;
+.close {
+  background-color: #F6A347;
   width: 20px;
   height: 20px;
-  color: darkblue;
+  color: #010A74;
   font-weight: bold;
 }
 
