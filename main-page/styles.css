@@ -130,18 +130,22 @@ form{
 /* popover */
 
   [popover] {
-    width: 727px;
+    width: 536px;
+    height: 310px;
     background: #eed0b2;
     border-bottom: 5px solid #f6a347;
     border-radius: 20%;
     color: #9614b5;
-    font-size: 32px;
+    font-size: 22px;
     padding: 40px;
+    margin-left: 150px;
+    margin-top: 30px;
+    /* hacer que se escondan los iconos  */
 
   }
   .cerrarppv {
-    margin-top: 30px;
-    margin-left: 300px;
+    margin-top: 15px;
+    margin-left: 200px;
     border: #9614b5 1px solid;
 
   }
