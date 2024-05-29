@@ -43,6 +43,10 @@ a{
     margin: 0px;
     border: #EED0B2 3px solid;
 }
+.fa-solid fa-volume-high:hover{
+    background-image: url("./Images/img.icons8.webp");
+
+}
 
 img{
     width: 376px;
