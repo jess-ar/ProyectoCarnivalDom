@@ -1,8 +1,3 @@
-
-function aleatorio(minimo, maximo){
-    var numero = Math.floor(Math.random() * (maximo - minimo +1) + minimo);
-    return numero;
-};
 function randoms(minimo, maximo){
     var numero = Math.floor(Math.random() * (maximo - minimo +1) + minimo);
     return numero;
@@ -26,7 +21,7 @@ function game(opUsuario){
     console.log("Usuario:",contUser)
     console.log("Maquina:",contOrdi)
     document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
-     }
+}
        else if(opcionUsuario == 1 && ordi == 0){    //el usuario escogió papel
         contUser++
         document.getElementById("scoreUser").innerHTML = contUser;
@@ -35,7 +30,7 @@ function game(opUsuario){
         console.log("Usuario:",contUser)
         console.log("Maquina:",contOrdi)
         document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
-       }
+    }
         else if(opcionUsuario == 2 && ordi == 1){    //el usuario escogió tijeras
             contUser++
             document.getElementById("scoreUser").innerHTML = contUser;
@@ -89,4 +84,46 @@ function timmer() {
     }
 };
 
-export {game, removeEffect, timmer}
+//*timer*//
+
+let timeLeft = 5;
+const timeDisplay = document.getElementById('time');
+const timerContainer = document.querySelector('.start');
+let countdown;
+
+const startTimer = () => {
+    timeLeft = 5;
+    updateTimeDisplay();
+    timerContainer.style.display = 'flex'; 
+
+    countdown = setInterval(() => {
+        if (timeLeft <= 0) {
+            hideTimer();
+        } else {
+            timeLeft -= 1;
+            updateTimeDisplay();
+        }
+    }, 1000);
+};
+
+const hideTimer = () => {
+    timerContainer.style.display = 'none'; 
+};
+
+const updateTimeDisplay = () => {
+    timeDisplay.textContent = timeLeft;
+    timeDisplay.classList.add(`color-${timeLeft}`);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    startTimer();
+
+    document.body.addEventListener('click', (event) => {
+        if (event.target.closest('.selector')) {
+            hideTimer();
+            startTimer();
+        }
+    });
+});
+
+export {game, removeEffect, startTimer, hideTimer}
