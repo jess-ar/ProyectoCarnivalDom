@@ -140,7 +140,6 @@ form{
     padding: 40px;
     margin-left: 150px;
     margin-top: 30px;
-    /* hacer que se escondan los iconos  */
 
   }
   .cerrarppv {
@@ -163,3 +162,6 @@ form{
     font-weight: bold;
   }
 
+.transformed{
+    transform: rotate(180deg);
+}

@@ -25,3 +25,13 @@ document.getElementsByClassName('stopSound').addEventListener('click', function(
     audio.currentTime = 0; // Opcional: reinicia el sonido al principio
     console.log("El sonido se ha detenido.");
 });
+
+function exit (){
+    confirm("¿Quieres salir?")
+}
+
+if (exit == true){
+    closeGame()
+} else{
+    console.log("No se cierra el juego")
+}
