@@ -29,6 +29,7 @@ a {
     align-items: center;
     margin-top: 20px;
 }
+
 #icon {
     text-align: center;
     display: inline-block;
@@ -42,6 +43,7 @@ a {
     margin: 0px;
     border: #eed0b2 3px solid;
 }
+
 .fa-solid fa-volume-high:hover {
     background-image: (
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='m22 15l-6-6m6 0l-6 6'/%3E%3Cpath stroke-linejoin='round' d='M2 14.959V9.04C2 8.466 2.448 8 3 8h3.586a.98.98 0 0 0 .707-.305l3-3.388c.63-.656 1.707-.191 1.707.736v13.914c0 .934-1.09 1.395-1.716.726l-2.99-3.369A.98.98 0 0 0 6.578 16H3c-.552 0-1-.466-1-1.041'/%3E%3C/g%3E%3C/svg%3E")
@@ -52,6 +54,7 @@ img {
     width: 376px;
     height: auto;
 }
+
 .logo {
     margin-top: 30px;
     display: flex;
@@ -59,6 +62,7 @@ img {
     align-items: center;
     height: 176px;
 }
+
 footer {
     width: 100%;
     display: flex;
@@ -81,6 +85,7 @@ form {
     display: flex;
     justify-content: center;
 }
+
 .input-player {
     text-align: center;
     font-size: 20px;
@@ -91,6 +96,7 @@ form {
     border: #f6a347 3px solid;
     border-radius: 32px;
 }
+
 .input-player::placeholder {
     color: #9614b5;
 }
@@ -106,10 +112,12 @@ form {
     width: 123px;
     height: 41px;
 }
+
 .play-father:hover {
     background-color: #f6bc7a;
     cursor: pointer;
 }
+
 .play {
     padding-bottom: 15px;
     border: none;
@@ -124,6 +132,7 @@ form {
     -webkit-text-stroke: 1.5px #f6a347;
     filter: drop-shadow(3px 2px 4px #00000091);
 }
+
 .play:hover {
     cursor: pointer;
 }
@@ -142,7 +151,6 @@ form {
     margin-right: auto; /* Centra el botón horizontalmente */
 }
 
-
 #rules {
     border: none;
     background-color: transparent; /*  esto es porque me salia un fondo blanco con un borde negro detrás del container-rules  */
@@ -158,18 +166,13 @@ form {
     background-color: $yellow-color;
     border-radius: 50px;
     border: 2px solid $cream-color;
-    margin-left: 60px;
     cursor: pointer;
-    bottom: 30px; /* A 30px desde la parte inferior del contenedor */
-    left: 30px; /* A 30px desde la parte izquierda del contenedor */
     /* para que el svg se ajuste al tamaño del botón */
     svg {
         width: 80%;
         height: 80%;
     }
 }
-
-
 
 .container-rules {
     /*  container caja de reglas */
@@ -190,8 +193,6 @@ h1 {
     text-align: center;
     margin-bottom: 10px;
 }
-
-
 
 li {
     @include text-style-4;
@@ -224,13 +225,30 @@ li {
     text-align: center;
 }
 
-/* Estilo para el efecto hover */
-.button-rules-volver:hover {
-    opacity: 0.8; /* Reduce la opacidad al pasar el cursor sobre el botón */
+footer.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between elements as needed */
+    padding: 20px; /* Optional, for spacing */
 }
 
-.button-rules-volver a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 5px 5px 0;
+/* Default styles (desktop) */
+footer.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between elements as needed */
+    padding: 20px; /* Optional, for spacing */
 }
+
+.button-rules-info {
+    width: 50px; /* Default width */
+    position: relative;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

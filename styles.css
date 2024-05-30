@@ -222,10 +222,7 @@ form {
   background-color: #F6A347;
   border-radius: 50px;
   border: 2px solid #EED0B2;
-  margin-left: 60px;
   cursor: pointer;
-  bottom: 30px; /* A 30px desde la parte inferior del contenedor */
-  left: 30px; /* A 30px desde la parte izquierda del contenedor */
   /* para que el svg se ajuste al tamaño del botón */
 }
 .button-rules-info svg {
@@ -294,15 +291,55 @@ li {
   text-align: center;
 }
 
-/* Estilo para el efecto hover */
-.button-rules-volver:hover {
-  opacity: 0.8; /* Reduce la opacidad al pasar el cursor sobre el botón */
+footer.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between elements as needed */
+  padding: 20px; /* Optional, for spacing */
 }
 
-.button-rules-volver a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 5px 5px 0;
+/* Default styles (desktop) */
+footer.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between elements as needed */
+  padding: 20px; /* Optional, for spacing */
+}
+
+.button-rules-info {
+  width: 50px; /* Default width */
+  position: relative;
+  left: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Media query for tablets */
+@media (max-width: 1133px) {
+  footer.footer {
+    flex-direction: row;
+    gap: 10px; /* Adjust spacing between elements as needed */
+  }
+  .button-rules-info {
+    width: 50px; /* Adjust width as needed */
+    position: relative;
+    left: 50px; /* Adjust this value to move it to the right */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  .input-player {
+    width: 70%; /* Adjust width as needed */
+  }
+  .play-father {
+    width: 70%; /* Adjust width as needed */
+  }
+  .play {
+    font-size: 28px; /* Adjust font size as needed */
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
