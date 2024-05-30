@@ -3,7 +3,57 @@
 /* Se puede cambiar to bottom a otras direcciones como to right (de izquierda a derecha), to left (de derecha a izquierda), to top (de abajo hacia arriba) o especificar un ángulo como 45deg. */
 /* El degradado radial con forma de diamante, se puede usar radial-gradient con la opción farthest-corner para que ocupe todo el contenedor. Sin embargo, CSS no tiene una opción específica para un degradado de "diamante", pero se puede lograr un efecto similar usando un degradado radial con una forma de "farthest-corner" o "closest-side". */
 /*  MIXINS TIPOGRAFÍA */
-/*estilos header*/
+* {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+}
+
+.result, .time {
+  display: flex;
+  justify-content: center;
+  font-size: 150px;
+  margin-top: 300px;
+  margin-bottom: 0;
+  color: #F6A347;
+  color: radial-gradient(closest-side, #F6A347 0%, #E67900 50%, #F6A347 100%);
+  -webkit-text-stroke: 3px #9614B5;
+}
+
+.config-result {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.buttons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+  border: 2px solid #EED0B2;
+  padding: 0;
+  display: inline-block;
+  position: center;
+  cursor: pointer;
+}
+
+.reset, .home {
+  background-color: #F6A347;
+  color: #010A74;
+  font-weight: bold;
+}
+
+.rules {
+  margin: 35px;
+}
 
 * {
   font-family: "Luckiest Guy", cursive;
@@ -103,7 +153,7 @@ p, h1 {
   width: 100%;
   height: auto;
   background-image: url(./game-page/img/PPT_ELEMENTOS-01-mobile.png);
-  background-size: content;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -149,7 +199,7 @@ p, h1 {
 }
 
 /*estilos footer*/
-[popover] {
+[popover], #effect {
   width: 727px;
   background: #EED0B2;
   border-bottom: 5px solid #F6A347;
@@ -180,6 +230,14 @@ p, h1 {
   margin-left: 300px;
 }
 
+#effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 /*.tiempo{ //es para un radio de desenfoque
   border-radius:50%;
   text-shadow:
@@ -187,6 +245,6 @@ p, h1 {
   -3px 3px 2px #EED0B2,
   -3px -3px 0 #EED0B2,
   3px -3px 0 #EED0B2,
-} */
+  } */
 
 /*# sourceMappingURL=style_game.css.map */
