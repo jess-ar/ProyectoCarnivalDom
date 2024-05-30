@@ -1,4 +1,4 @@
-# Carnival DOM project :tw-1f0cf:
+# Carnival DOM project
 
 ### Index
 1. General Information
