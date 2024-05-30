@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../main-page/styles.css">
+    <link rel="stylesheet" href="../main-page/styles-sara.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -14,15 +14,17 @@
 <body class="bg" id="load">
     <div id="sonido"></div>
     <header class="controls">
-        <a href=""><span id="icon" onclick="closeGame()"><i class="fa-solid fa-arrow-right-from-bracket transformed" ></i></i></span></a>
-        <a href=""><span id="icon"><i class="fa-solid fa-volume-high"></i></span></a>
+        <button href=""><span class="controls-buttons" onclick="closeGame()"><i class="fa-solid fa-arrow-right-from-bracket transformed"></i></i></span></button>
+        <button href="" id="sound-button" onclick="soundOn()"><span class="controls-buttons button"><i class="fa-solid fa-volume-high" id="add"></i><i class="fa-solid fa-volume-off" id="remove" onclick="soundOff()"></i></span></button>
+        
     </header>
+
     <main class="logo">
         <img src="./Images/PPT ELEMENTOS-02.png" alt="">
     </main>
     <footer>
         <div class="info">
-            <button popovertarget="mensaje" popovertargetaction="toggle" class="information"><img src="./Images/info.svg" alt="reglas" id="icon" ></button>
+            <button popovertarget="mensaje" popovertargetaction="toggle" class="information"><img src="./Images/info.svg" alt="reglas" class="controls-buttons"></button>
             <div id="mensaje" popover="manual">
                 <h1>REGLAS DEL JUEGO</h1>
                 <ul>
@@ -39,7 +41,7 @@
                 <input type="text" placeholder="NOMBRE DEL JUGADOR" class="input-player">
             </form>
             <div class="play-father">
-                <button  value="button" onclick="playAudio.play(); location.href='../game.html'" class="play">PLAY</button>
+                <button value="button" onclick="playAudio.play(); location.href='../game.html'" class="play">PLAY</button>
             </div>
         </section>
     </footer>

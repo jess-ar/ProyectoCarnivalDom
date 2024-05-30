@@ -5,7 +5,7 @@ function closeGame(){
     let closeGame = window.close();
     let cerrar = document.getElementsByClassName('fa-solid fa-xmark')
 }
-//sigue reproduciéndose SOLO cuando interactúas con la pág
+// //ON
 
 window.addEventListener('load', function() {
     var audio = new Audio('game-music-loop-3-144252.mp3'); // Un archivo de sonido más corto
@@ -17,14 +17,23 @@ window.addEventListener('load', function() {
     });
 });
 
-// para parar la música (de momento no funciona)
+function soundOn() {
+    // localStorage.setItem("favn1", "<a href='/details/title'><img src='https://images.unsplash.com/photo-1659560893497-bb094425bd21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1498&q=80'></a>");
+    boton_add = document.getElementById("add");
+    boton_add.style.display = "none";
+    boton_remove = document.getElementById("remove");
+    boton_remove.style.display = "block";
+}
 
-document.getElementsByClassName('stopSound').addEventListener('click', function() { 
-    var audio = document.getElementById('myAudio');
-    audio.pause(); // Pausa el sonido
-    audio.currentTime = 0; // Opcional: reinicia el sonido al principio
-    console.log("El sonido se ha detenido.");
-});
+function soundOff() {
+    // localStorage.removeItem("favn1");
+    boton_remove = document.getElementById("remove");
+    boton_remove.style.display = "none";   
+    boton_add = document.getElementById("add");
+    boton_add.style.display = "block";
+
+  }
+
 
 function exit (){
     confirm("¿Quieres salir?")
@@ -35,3 +44,4 @@ if (exit == true){
 } else{
     console.log("No se cierra el juego")
 }
+
