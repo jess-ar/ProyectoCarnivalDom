@@ -204,6 +204,11 @@ p, h1{
   background-color:$blue-color; 
 }
 
+.selector img {
+  width: 95%;
+  height: auto;
+}
+
 .selectsUser {
   display: flex;
   justify-content: center;

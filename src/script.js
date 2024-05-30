@@ -72,17 +72,6 @@ document.getElementById('effect').style.display = "";
 function removeEffect() {
     document.getElementById('effect').style.display = "none";
 }
-//funcion temporizador
-var segundos = 5;
-function timmer() {
-    document.getElementById("tiempo").innerHTML = segundos;
-    if(segundos==0){
-        alert("Has perdido un turno");
-    }else{
-        segundos--;
-        //setTimeout("temporizador()",1000);
-    }
-};
 
 //*timer*//
 
@@ -94,10 +83,11 @@ let countdown;
 const startTimer = () => {
     timeLeft = 5;
     updateTimeDisplay();
-    timerContainer.style.display = 'flex'; 
+    timerContainer.classList.remove('hidden'); 
 
     countdown = setInterval(() => {
         if (timeLeft <= 0) {
+            //*alert("Perdiste el turno");
             hideTimer();
         } else {
             timeLeft -= 1;
@@ -107,7 +97,7 @@ const startTimer = () => {
 };
 
 const hideTimer = () => {
-    timerContainer.style.display = 'none'; 
+    timerContainer.classList.add('hidden'); 
 };
 
 const updateTimeDisplay = () => {
@@ -120,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('.selector')) {
+            clearInterval(countdown);
             hideTimer();
             startTimer();
         }
