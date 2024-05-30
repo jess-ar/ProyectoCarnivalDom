@@ -239,6 +239,11 @@ p, h1 {
     color: #EED0B2;
   }
 }
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .player-name {
   background-color: #EED0B2;
   border: 2px solid #F6A347;
@@ -253,6 +258,10 @@ p, h1 {
   position: center;
   cursor: pointer;
   background-color: #188CCC;
+}
+
+button:active {
+  transform: scale(0.95);
 }
 
 .selector img {
@@ -274,7 +283,6 @@ p, h1 {
   margin-top: 300px;
   margin-bottom: 0;
   color: #F6A347;
-  color: radial-gradient(closest-side, #F6A347 0%, #E67900 50%, #F6A347 100%);
   -webkit-text-stroke: 3px #9614B5;
 }
 
@@ -295,10 +303,14 @@ p, h1 {
   gap: 100px;
 }
 
-.close, .sound, .reset, .home, .rules {
+.close, .sound {
   background-color: #F6A347;
   color: #010A74;
   font-weight: bold;
+}
+
+.close:active, .sound:active {
+  transform: scale(0.95);
 }
 
 /*.tiempo{ //es para un radio de desenfoque

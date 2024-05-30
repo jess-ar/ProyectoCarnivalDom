@@ -106,11 +106,10 @@ const updateTimeDisplay = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    startTimer();
+    setTimeout(startTimer, 2000);
 
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('.selector')) {
-            clearInterval(countdown);
             hideTimer();
             startTimer();
         }

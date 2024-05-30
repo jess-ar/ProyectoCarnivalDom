@@ -188,6 +188,11 @@ p, h1{
   }
 }
 
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .player-name{
   background-color: $cream-color;
   border: 2px solid $yellow-color;
@@ -202,6 +207,10 @@ p, h1{
   position:center;
   cursor: pointer;
   background-color:$blue-color; 
+}
+
+button:active, {
+  transform: scale(0.95);
 }
 
 .selector img {
@@ -222,8 +231,7 @@ p, h1{
   font-size: 150px;
   margin-top: 300px;
   margin-bottom: 0;  
-  color:$yellow-color; 
-  color: $gradient-4;
+  color: $yellow-color; 
   -webkit-text-stroke: 3px $purple-color;
 }
 
@@ -245,10 +253,14 @@ p, h1{
   gap:100px;
 }
 
-.close, .sound, .reset, .home, .rules{
+.close, .sound {
   background-color:$yellow-color ;
   color:$dark-blue-color;
   font-weight: bold;
+}
+
+.close:active, .sound:active {
+  transform: scale(0.95);
 }
   
 
