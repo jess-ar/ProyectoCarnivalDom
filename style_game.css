@@ -281,15 +281,6 @@ button:active {
 }
 
 /*estilos footer*/
-[popover], #effect {
-  width: 727px;
-  background: #EED0B2;
-  border-bottom: 5px solid #F6A347;
-  border-radius: 20%;
-  color: #9614B5;
-  font-size: 32px;
-  padding: 40px;
-}
 
 .config-result {
   display: flex;
@@ -303,17 +294,16 @@ button:active {
   font-weight: bold;
 }
 
-.close:active, .sound:active {
-  transform: scale(0.95);
+#effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: #F6A347;
+  font-size: 32px;
+  text-align: center;
+  background-color: transparent;
+backdrop-filter: blur(20px);
+padding: 100px;
 }
-
-/*.tiempo{ //es para un radio de desenfoque
-  border-radius:50%;
-  text-shadow:
-  3px 3px 2px #EED0B2,
-  -3px 3px 2px #EED0B2,
-  -3px -3px 0 #EED0B2,
-  3px -3px 0 #EED0B2,
-  } */
-
-/*# sourceMappingURL=style_game.css.map */
