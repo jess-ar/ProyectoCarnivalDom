@@ -164,27 +164,21 @@ p, h1{
 @keyframes countdown {
   from {
     content: "5";
-    color: $purple-color;
   }
   20% {
     content: "4";
-    color: $dark-blue-color;
   }
   40% {
     content: '3';
-    color: $blue-color;
   }
   60% {
     content: '2';
-    color: $pink-color;
   }
   80% {
     content: '1';
-    color: $dark-blue-color;
   }
   to {
     content: '0';
-    color: $cream-color;
   }
 }
 

@@ -216,27 +216,21 @@ p, h1 {
 @keyframes countdown {
   from {
     content: "5";
-    color: #9614B5;
   }
   20% {
     content: "4";
-    color: #010A74;
   }
   40% {
     content: "3";
-    color: #188CCC;
   }
   60% {
     content: "2";
-    color: #EB1A7E;
   }
   80% {
     content: "1";
-    color: #010A74;
   }
   to {
     content: "0";
-    color: #EED0B2;
   }
 }
 .hidden {

@@ -81,20 +81,37 @@ const timerContainer = document.querySelector('.start');
 let countdown;
 
 const startTimer = () => {
-    timeLeft = 5;
     updateTimeDisplay();
     timerContainer.classList.remove('hidden'); 
 
-    countdown = setInterval(() => {
+    timeLeft-=1
+
+    if (timeLeft<0) {
+        window.alert("Perdiste el turno");
+        hideTimer();
+        score();
+        timeLeft = 5;
+        clearInterval(countdown)
+    
+    }
+
+    /*countdown = setInterval(() => {
         if (timeLeft <= 0) {
-            //*alert("Perdiste el turno");
+           //*window.alert("Perdiste el turno");
             hideTimer();
+            
         } else {
             timeLeft -= 1;
             updateTimeDisplay();
         }
     }, 1000);
+    console.log (timeLeft)*/
 };
+
+const score = () => {
+    contOrdi++
+        document.getElementById("scoreComputer").innerHTML = contOrdi;
+}
 
 const hideTimer = () => {
     timerContainer.classList.add('hidden'); 
@@ -105,13 +122,17 @@ const updateTimeDisplay = () => {
     timeDisplay.classList.add(`color-${timeLeft}`);
 };
 
+const startCount = () => {
+    countdown = setInterval (startTimer, 1000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(startTimer, 2000);
+    startCount();
 
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('.selector')) {
             hideTimer();
-            startTimer();
+            startCount();
         }
     });
 });
