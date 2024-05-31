@@ -24,36 +24,41 @@
     <main class="logo">
         <img src="main-page/Images/PPT ELEMENTOS-02.png" alt="">
     </main>
+
+
+
     <footer class="footer">
-        <article>
-            <button class="button-rules-info" popovertarget="rules" popovertargetaction="toggle">
-                <img src="main-page/Images/info.svg" alt="Icon.info" id="icon" />
-            </button>
 
-            <div id="rules" popover="manual">
-                <ul class="container-rules">
-                    <h1>REGLAS DEL JUEGO</h1>
-                    <li>La piedra aplasta la tijera.</li>
-                    <li>La tijera corta el papel.</li>
-                    <li>El papel envuelve la piedra.</li>
-                    <li>En caso de empate, se juega otra vez.</li>
-                    <button class="button-rules-x" popovertarget="rules" popovertargetaction="hide">
-                        <span>X</span>
-                    </button>
-                </ul>
-            </div>
-        </article>
+        <button class="button-rules-info" popovertarget="rules" popovertargetaction="toggle">
+            <img src="main-page/Images/info.svg" alt="Icon.info" id="icon" />
+        </button>
 
-        <section class="input-button">
-            <form action="">
-                <input type="text" placeholder="NOMBRE DEL JUGADOR" class="input-player">
-            </form>
-            <div class="play-father">
-                <button value="button" onclick="playAudio.play(); location.href='../game.html'"
-                    class="play">PLAY</button>
-            </div>
+        <div id="rules" popover="manual">
+            <ul class="container-rules">
+                <h1>REGLAS DEL JUEGO</h1>
+                <li>La piedra aplasta la tijera.</li>
+                <li>La tijera corta el papel.</li>
+                <li>El papel envuelve la piedra.</li>
+                <li>En caso de empate, se juega otra vez.</li>
+                <button class="button-rules-x" popovertarget="rules" popovertargetaction="hide">
+                    <span>X</span>
+                </button>
+            </ul>
+        </div>
+
+        <section class="input-button"></section>
+        <form action="">
+            <input type="text" placeholder="NOMBRE DEL JUGADOR" class="input-player">
+        </form>
+        <div class="play-father">
+            <button value="button" onclick="playAudio.play(); location.href='../game.html'" class="play">PLAY</button>
+        </div>
         </section>
     </footer>
+
+
+
+    
     <script src="main-page/app.js"></script>
 </body>
 

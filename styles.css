@@ -112,7 +112,6 @@ img {
 }
 
 .logo {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,27 +119,14 @@ img {
 }
 
 footer {
-  width: 100%;
+  padding-right: 40%;
   display: flex;
   justify-content: space-between;
-}
-
-.info {
-  width: 5%;
-  margin-left: 57px;
-  /* margin-right: 120px; */
+  align-content: center;
 }
 
 .input-button {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-form {
-  display: flex;
-  justify-content: center;
+  gap: 2%;
 }
 
 .input-player {
@@ -291,55 +277,12 @@ li {
   text-align: center;
 }
 
-footer.footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* Adjust spacing between elements as needed */
-  padding: 20px; /* Optional, for spacing */
-}
-
-/* Default styles (desktop) */
-footer.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* Adjust spacing between elements as needed */
-  padding: 20px; /* Optional, for spacing */
-}
-
 .button-rules-info {
   width: 50px; /* Default width */
   position: relative;
   left: auto;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Media query for tablets */
-@media (max-width: 1133px) {
-  footer.footer {
-    flex-direction: row;
-    gap: 10px; /* Adjust spacing between elements as needed */
-  }
-  .button-rules-info {
-    width: 50px; /* Adjust width as needed */
-    position: relative;
-    left: 50px; /* Adjust this value to move it to the right */
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px; /* Adjust as needed */
-  }
-  .input-player {
-    width: 70%; /* Adjust width as needed */
-  }
-  .play-father {
-    width: 70%; /* Adjust width as needed */
-  }
-  .play {
-    font-size: 28px; /* Adjust font size as needed */
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
