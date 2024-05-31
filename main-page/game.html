@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijeras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/917f8278a9.js" crossorigin="anonymous"></script>
+        <script src="./src/script.js"></script>
+    <link rel="stylesheet" href="../style_game.css">
+  </head>
+<body class="bg">
+  <header>
+    <section class="score">
+      <div class="scoreComputer">
+      <p>Computer</p><p id="scoreComputer">0</p> 
+      </div>
+      <div class="scoreUser">
+      <p>Player</p><p id="scoreUser">0</p> 
+      </div>
+    </section>
+  </header>
+    <main>
+      <article>
+        <div class="hands">
+          <img src="./game-page/img/PPT ELEMENTOS-piedra izq.png" class="left">
+        <div class="start">
+          <div class="timer"></div>
+            <span  id="time" class="text-style-1">5</span>
+        </div>
+      <img src="./game-page/img/PPT ELEMENTOS-piedra der.png" class="rigth">
+        </div>
+      </article>
+        <section id="selectUser" class="selectsUser">
+          <button id="0" value="0" class="selector">
+            <img src="./game-page/img/Boton_piedra.png" alt="Piedra">
+          </button>
+          <button id="1" value="1" class="selector">
+            <img src="./game-page/img/Boton_papel.png"alt="Papel">
+          </button>
+          <button id="2" value="2" class="selector">
+            <img src="./game-page/img/Boton_tijera.png">
+          </button>
+        </section>
+      </main>	
+    <footer >
+      <div class="controls">
+        <a href="./index.html"><span id="icon"><i class="fa-solid fa-xmark"></i></span></a>
+        <a href=""><span id="icon"><i class="fa-solid fa-volume-high"></i></span></a>
+      </div>
+      <div id="effect" style="display:none"></div>
+    </footer>
+      <script src="./app.js"></script>
+      <script src="src/script.js" type="module" ></script>
+      <script src="src/events.js" type="module"></script>
+</body>
+</html>
