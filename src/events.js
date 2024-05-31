@@ -1,4 +1,4 @@
-import { game, removeEffect, timmer} from './script.js'
+import { game, removeEffect} from './script.js'
 
 /*let tempBoton = document.getElementById("play");
 tempBoton.addEventListener("click", timmer)*/
