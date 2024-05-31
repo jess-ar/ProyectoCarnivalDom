@@ -56,7 +56,6 @@ img {
 }
 
 .logo {
-    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,26 +63,19 @@ img {
 }
 
 footer {
-    width: 100%;
+    padding-right: 40%;
     display: flex;
     justify-content: space-between;
+    align-content: center;
 }
 
-.info {
-    width: 5%;
-    margin-left: 57px;
-    /* margin-right: 120px; */
-}
+
 .input-button {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 2%;
 }
 
 form {
-    display: flex;
-    justify-content: center;
+    
 }
 
 .input-player {
@@ -152,6 +144,7 @@ form {
 }
 
 #rules {
+    
     border: none;
     background-color: transparent; /*  esto es porque me salia un fondo blanco con un borde negro detrás del container-rules  */
 }
@@ -225,23 +218,7 @@ li {
     text-align: center;
 }
 
-footer.footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Adjust spacing between elements as needed */
-    padding: 20px; /* Optional, for spacing */
-}
 
-/* Default styles (desktop) */
-footer.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Adjust spacing between elements as needed */
-    padding: 20px; /* Optional, for spacing */
-}
 
 .button-rules-info {
     width: 50px; /* Default width */
