@@ -75,10 +75,10 @@ a {
 .controls {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 20px;
-  margin-top: -40px;
+  margin-top: -10px;
 }
 
 #icon {
@@ -89,6 +89,7 @@ a {
   background-color: #F6A347;
   border-radius: 50%;
   padding: 10px;
+  margin-top: -150px;
   border: 2px solid #EED0B2;
   text-align: center;
   justify-content: center;
@@ -116,7 +117,7 @@ p, h1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-top: -200px;
+  margin: 0;
   border: 2px solid #EED0B2;
   padding: 0;
   display: inline-block;
@@ -157,85 +158,16 @@ p, h1 {
 }
 
 .hands {
+  height: auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-}
-
-.left {
-  height: 35%;
-  width: 35%;
-  display: flex;
-  justify-content: start;
-  margin-top: 20px;
-}
-
-.rigth {
-  height: 35%;
-  width: 35%;
-  display: flex;
-  justify-content: end;
   margin-top: 20px;
 }
 
 .start {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 250px;
-}
-
-.timer {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: #F6A347;
-  border: 5px solid #EED0B2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: radial-gradient(closest-side, #F6A347 0%, #E67900 50%, #F6A347 100%);
-  font-size: 500px;
-  font-family: "Luckiest Guy", cursive;
-  font-weight: bolder;
-  margin-top: -20px;
-}
-
-#time {
-  animation: countdown 5s linear infinite;
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 120px;
-  color: white;
-  transition: color 0.2s ease;
-}
-
-@keyframes countdown {
-  from {
-    content: "5";
-  }
-  20% {
-    content: "4";
-  }
-  40% {
-    content: "3";
-  }
-  60% {
-    content: "2";
-  }
-  80% {
-    content: "1";
-  }
-  to {
-    content: "0";
-  }
-}
-.hidden {
-  opacity: 0;
-  pointer-events: none;
+  gap: 20px;
 }
 
 .player-name {
@@ -244,43 +176,38 @@ p, h1 {
   border-radius: 20%;
 }
 
-.selector {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #EED0B2;
-  position: center;
-  cursor: pointer;
+.piedra, .papel, .tijeras {
   background-color: #188CCC;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-.selector img {
-  width: 95%;
-  height: auto;
 }
 
 .selectsUser {
   display: flex;
   justify-content: center;
   gap: 19px;
-  margin-top: -30px;
+  margin-top: -70px;
 }
 
-.result {
+.result, .time {
   display: flex;
   justify-content: center;
   font-size: 150px;
   margin-top: 300px;
   margin-bottom: 0;
   color: #F6A347;
+  color: radial-gradient(closest-side, #F6A347 0%, #E67900 50%, #F6A347 100%);
   -webkit-text-stroke: 3px #9614B5;
 }
 
 /*estilos footer*/
+[popover], #effect {
+  width: 727px;
+  background: #EED0B2;
+  border-bottom: 5px solid #F6A347;
+  border-radius: 20%;
+  color: #9614B5;
+  font-size: 32px;
+  padding: 40px;
+}
 
 .config-result {
   display: flex;
@@ -288,10 +215,19 @@ button:active {
   gap: 100px;
 }
 
-.close, .sound {
+.close, .sound, .reset, .home, .rules {
   background-color: #F6A347;
   color: #010A74;
   font-weight: bold;
+}
+
+.rules {
+  margin: 35px;
+}
+
+.cerrarppv {
+  margin-top: 30px;
+  margin-left: 300px;
 }
 
 #effect {
@@ -299,11 +235,15 @@ button:active {
   height: 100%;
   width: 100%;
   top: 0;
-  left: 0;
-  color: #F6A347;
-  font-size: 32px;
-  text-align: center;
-  background-color: transparent;
-backdrop-filter: blur(20px);
-padding: 100px;
 }
+
+/*.tiempo{ //es para un radio de desenfoque
+  border-radius:50%;
+  text-shadow:
+  3px 3px 2px #EED0B2,
+  -3px 3px 2px #EED0B2,
+  -3px -3px 0 #EED0B2,
+  3px -3px 0 #EED0B2,
+  } */
+
+/*# sourceMappingURL=style_game.css.map */

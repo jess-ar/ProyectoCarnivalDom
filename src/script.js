@@ -14,34 +14,31 @@ function game(opUsuario){
     if(contUser < 2 && contOrdi < 2){
     if (opcionUsuario !== ordi){
     if(opcionUsuario == 0 && ordi == 2){    //el usuario escogió piedra 
-
-       contUser++
-       document.getElementById("scoreUser").innerHTML = contUser;
-       document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
+        contUser++
+        document.getElementById("scoreUser").innerHTML = contUser;
+        document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
     counter();
-     }
-
+    }
        else if(opcionUsuario == 1 && ordi == 0){    //el usuario escogió papel
         contUser++
         document.getElementById("scoreUser").innerHTML = contUser;
         document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
         counter();
-       }
-
+    }
         else if(opcionUsuario == 2 && ordi == 1){    //el usuario escogió tijeras
             contUser++
             document.getElementById("scoreUser").innerHTML = contUser;
             document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
             counter();
-           }
-           else{contOrdi++
+        }
+        else{contOrdi++
             document.getElementById("scoreComputer").innerHTML = contOrdi;
             document.getElementById('effect').innerHTML ='<h1>¡Perdiste!</h1> La maquina eligio '+ opciones[ordi];
             counter(); 
         }
     }
     else{
-       
+
             document.getElementById('effect').innerHTML ="<h1>¡Empate!</h1> Ambos eligieron "+ opciones[ordi];
     }
 
@@ -51,6 +48,24 @@ document.getElementById('effect').style.display = "";
 
 function removeEffect() {
     document.getElementById('effect').style.display = "none";
+}
+
+function reset() {
+    contUser=0;
+    document.getElementById("scoreUser").innerHTML = contUser;
+    contOrdi=0;
+    document.getElementById("scoreComputer").innerHTML = contOrdi
+}
+
+function counter(){
+        if (contUser == 2 ) {
+        document.getElementById('effect').innerHTML ="<h1>¡GANASTE!</h1>" + "Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
+        reset();
+    }
+    else if (contOrdi == 2 ) {
+        document.getElementById('effect').innerHTML ="<h1>¡PERDISTE!</h1>" +"Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
+        reset();
+    }
 }
 
 //*timer*//
@@ -67,7 +82,7 @@ const startTimer = () => {
     timeLeft-=1
 
     if (timeLeft<0) {
-        window.alert("Perdiste el turno");
+        windowe.alert("Perdiste el turno");
         hideTimer();
         score();
         timeLeft = 5;
@@ -117,24 +132,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function reset() {
-    contUser=0;
-    document.getElementById("scoreUser").innerHTML = contUser;
-    contOrdi=0;
-    document.getElementById("scoreComputer").innerHTML = contOrdi
-  }
-
-  function counter(){
-        if (contUser == 2 ) {
-        document.getElementById('effect').innerHTML ="<h1>¡GANASTE!</h1>" + "Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
-        reset();  
-    }
-    else if (contOrdi == 2 ) {
-        document.getElementById('effect').innerHTML ="<h1>¡PERDISTE!</h1>" +"Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
-        reset();  
-    }    
-  }
-
-
-export {game, removeEffect, startTimer, hideTimer, reset}
-
+export {game, removeEffect, startTimer, hideTimer}
