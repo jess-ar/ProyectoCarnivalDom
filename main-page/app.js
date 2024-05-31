@@ -3,7 +3,7 @@ function closeGame(){
     let cerrar = document.getElementsByClassName('fa-solid fa-xmark')
 }
 
-// musica
+// music
 let progress = document.getElementById("progress")
 let music = document.getElementById('music')
 let ctrlIcon = document.getElementById('ctrlIcon')
@@ -34,8 +34,7 @@ progress.oninput = function(){
         ctrlIcon.classList.add('fa-volume-high')
     }
 }
-// fin musica
-
+//exit
 function exit (){
     confirm("¿Quieres salir?")
 }
@@ -44,5 +43,13 @@ if (exit == true){
     closeGame()
 } else{
     console.log("No se cierra el juego")
+}
+
+// let value = document.getElementById('searchInput').value;
+// let nombre = document.getElementsByClassName('play')
+
+function namePlayer(){
+    var namePlayer= document.getElementById('searchInput').value;
+    console.log(namePlayer)
 }
 

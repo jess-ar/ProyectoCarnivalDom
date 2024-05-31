@@ -19,7 +19,6 @@
         <button href="" class="controls-buttons"><span onclick="closeGame()"><i class="fa-solid fa-arrow-right-from-bracket transformed"></i></span></button>
         <div class="controls">
             <div onclick="playPause()"><i class="fa-solid fa-volume-high controls-buttons button " id="ctrlIcon"></i></div>
-            <!-- <button href="" id="playSound" class="controls-buttons button"><i class="fa-solid fa-volume-high" id="play-icon"></i><i class="fa-solid fa-volume-off" id="muteSound"></i></button> -->
         </div>
         
     </header>
@@ -43,10 +42,10 @@
         </div>
         <section class="input-button">
             <form action="">
-                <input type="text" placeholder="NOMBRE DEL JUGADOR" class="input-player">
+                <input type="text" id="searchInput" placeholder="NOMBRE DEL JUGADOR"  name="nameplayer" class="input-player">
             </form>
             <div class="play-father">
-                <button value="button" onclick="playAudio.play(); location.href='../game.html'" class="play">PLAY</button>
+                <button value="button" onclick="location.href='game.html'; namePlayer()" class="play">PLAY</button>
             </div>
         </section>
     </footer>
