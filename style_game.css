@@ -199,7 +199,7 @@ p, h1 {
 }
 
 /*estilos footer*/
-[popover], #effect {
+[popover]{
   width: 727px;
   background: #EED0B2;
   border-bottom: 5px solid #F6A347;
@@ -236,6 +236,12 @@ p, h1 {
   width: 100%;
   top: 0;
   left: 0;
+  color: #F6A347;
+  font-size: 32px;
+  text-align: center;
+  background-color: transparent;
+backdrop-filter: blur(20px);
+padding: 100px;
 }
 
 /*.tiempo{ //es para un radio de desenfoque
