@@ -15,12 +15,12 @@ music.onloadeddata = function(){
 function playPause(){
     if(music.paused){
         music.play();
-        ctrlIcon.classList.remove('fa-solid fa-volume-high')
-        ctrlIcon.classList.add('fa-solid fa-volume-off')
+        ctrlIcon.classList.remove('fa-volume-off')
+        ctrlIcon.classList.add('fa-volume-high')
     }else{
         music.pause();
-        ctrlIcon.classList.remove('fa-solid fa-volume-off')
-        ctrlIcon.classList.add('fa-solid fa-volume-high')
+        ctrlIcon.classList.remove('fa-volume-high')
+        ctrlIcon.classList.add('fa-volume-off')
     }
 }
 music.addEventListener('timeupdate', function(){
@@ -30,8 +30,8 @@ progress.oninput = function(){
     music.currentTime = progress.value;
     if(music.paused){
         music.play();
-        ctrlIcon.classList.remove('fa-solid fa-volume-high')
-        ctrlIcon.classList.add('fa-solid fa-volume-off')
+        ctrlIcon.classList.remove('fa-volume-off')
+        ctrlIcon.classList.add('fa-volume-high')
     }
 }
 // fin musica

@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body class="bg">
-    <audio id="music">
-        <source src="game-music-loop-3-144252.mp3" type="autoplay">
+    <audio id="music" autoplay>
+        <source src="game-music-loop-3-144252.mp3" type="audio/mpeg">
     </audio>
     <header class="controls">
         <button href="" class="controls-buttons"><span onclick="closeGame()"><i class="fa-solid fa-arrow-right-from-bracket transformed"></i></span></button>
         <div class="controls">
-            <div onclick="playPause()"><i class="fa-solid fa-volume-high controls-buttons button" id="ctrlIcon"></i></div>
+            <div onclick="playPause()"><i class="fa-solid fa-volume-high controls-buttons button " id="ctrlIcon"></i></div>
             <!-- <button href="" id="playSound" class="controls-buttons button"><i class="fa-solid fa-volume-high" id="play-icon"></i><i class="fa-solid fa-volume-off" id="muteSound"></i></button> -->
         </div>
         
