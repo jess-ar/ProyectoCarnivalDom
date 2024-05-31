@@ -10,41 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/917f8278a9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="app.js"></script>
 </head>
 <body class="bg">
-    <!-- header -->
+    <div id="sonido"></div>
     <header class="controls">
         <a href=""><span id="icon" onclick="closeGame()"><i class="fa-solid fa-arrow-right-from-bracket"></i></i></span></a>
-        <a href=""><span id="icon"><i class="fa-solid fa-volume-high"></i></span></a>
+        <a href=""><span id="icon"><i class="fa-solid fa-volume-high myAudio"></i></span></a>
     </header>
-    <!-- main -->
     <main class="logo">
         <img src="./Images/PPT ELEMENTOS-02.png" alt="">
     </main>
-    <!-- footer -->
     <footer>
-        <div class="info ">
+        <div class="info">
             <button popovertarget="mensaje" popovertargetaction="toggle" class="information"><img src="./Images/info.svg" alt="reglas" id="icon" ></button>
-        <div id="mensaje" popover="manual">
-          <h1>REGLAS DEL JUEGO</h1>
-          <ul>
-            <li>La piedra aplasta la tijera.</li>
-            <li>La tijera corta el papel.</li>
-            <li>El papel envuelve la piedra.</li>
-            <li>En caso de empate, se juega otra vez.</li>
-            <button popovertarget="mensaje" popovertargetaction="hide" class="cerrar cerrarppv">X</button>
-          </ul>
-        </div>
+            <div id="mensaje" popover="manual">
+                <h1>REGLAS DEL JUEGO</h1>
+                <ul>
+                    <li>La piedra aplasta la tijera.</li>
+                    <li>La tijera corta el papel.</li>
+                    <li>El papel envuelve la piedra.</li>
+                    <li>En caso de empate, se juega otra vez.</li>
+                    <button popovertarget="mensaje" popovertargetaction="hide" class="cerrar cerrarppv">X</button>
+                </ul>
+            </div>
         </div>
         <section class="input-button">
             <form action="">
                 <input type="text" placeholder="NOMBRE DEL JUGADOR" class="input-player">
             </form>
-                <div class="play-father">
-                    <button  value="button" onclick="playAudio.play(); location.href='../game.html'" class="play">PLAY</button>
+            <div class="play-father">
+                <button  value="button" onclick="playAudio.play(); location.href='../game.html'" class="play">PLAY</button>
             </div>
         </section>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

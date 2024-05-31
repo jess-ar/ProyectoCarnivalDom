@@ -1,4 +1,3 @@
-
 function randoms(minimo, maximo){
     var numero = Math.floor(Math.random() * (maximo - minimo +1) + minimo);
     return numero;
@@ -15,17 +14,20 @@ function game(opUsuario){
     if(contUser < 2 && contOrdi < 2){
     if (opcionUsuario !== ordi){
     if(opcionUsuario == 0 && ordi == 2){    //el usuario escogió piedra 
+
        contUser++
        document.getElementById("scoreUser").innerHTML = contUser;
        document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
     counter();
      }
+
        else if(opcionUsuario == 1 && ordi == 0){    //el usuario escogió papel
         contUser++
         document.getElementById("scoreUser").innerHTML = contUser;
         document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
         counter();
        }
+
         else if(opcionUsuario == 2 && ordi == 1){    //el usuario escogió tijeras
             contUser++
             document.getElementById("scoreUser").innerHTML = contUser;
@@ -50,6 +52,71 @@ document.getElementById('effect').style.display = "";
 function removeEffect() {
     document.getElementById('effect').style.display = "none";
 }
+
+//*timer*//
+
+let timeLeft = 5;
+const timeDisplay = document.getElementById('time');
+const timerContainer = document.querySelector('.start');
+let countdown;
+
+const startTimer = () => {
+    updateTimeDisplay();
+    timerContainer.classList.remove('hidden'); 
+
+    timeLeft-=1
+
+    if (timeLeft<0) {
+        window.alert("Perdiste el turno");
+        hideTimer();
+        score();
+        timeLeft = 5;
+        clearInterval(countdown)
+    
+    }
+
+    /*countdown = setInterval(() => {
+        if (timeLeft <= 0) {
+           //*window.alert("Perdiste el turno");
+            hideTimer();
+            
+        } else {
+            timeLeft -= 1;
+            updateTimeDisplay();
+        }
+    }, 1000);
+    console.log (timeLeft)*/
+};
+
+const score = () => {
+    contOrdi++
+        document.getElementById("scoreComputer").innerHTML = contOrdi;
+}
+
+const hideTimer = () => {
+    timerContainer.classList.add('hidden'); 
+};
+
+const updateTimeDisplay = () => {
+    timeDisplay.textContent = timeLeft;
+    timeDisplay.classList.add(`color-${timeLeft}`);
+};
+
+const startCount = () => {
+    countdown = setInterval (startTimer, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    startCount();
+
+    document.body.addEventListener('click', (event) => {
+        if (event.target.closest('.selector')) {
+            hideTimer();
+            startCount();
+        }
+    });
+});
+
 function reset() {
     contUser=0;
     document.getElementById("scoreUser").innerHTML = contUser;
@@ -69,4 +136,5 @@ function reset() {
   }
 
 
-export {game, removeEffect, reset}
+export {game, removeEffect, startTimer, hideTimer, reset}
+
