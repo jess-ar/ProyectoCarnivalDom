@@ -34,6 +34,10 @@ progress.oninput = function(){
         ctrlIcon.classList.add('fa-volume-high')
     }
 }
+
+const playAudio = document.getElementById('playAudio');
+
+
 //exit
 function exit (){
     confirm("¿Quieres salir?")

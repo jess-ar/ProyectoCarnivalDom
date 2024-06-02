@@ -18,20 +18,16 @@
     <header class="controls">
         <button href="" class="controls-buttons"><span onclick="closeGame()"><i class="fa-solid fa-arrow-right-from-bracket transformed"></i></span></button>
         <div class="controls">
-            <div onclick="playPause()"><i class="fa-solid fa-volume-high controls-buttons button " id="ctrlIcon"></i></div>
+            <div onclick="playPause()"><i class="fa-solid fa-volume-high controls-buttons button" id="ctrlIcon"></i></div>
         </div>
-        
     </header>
-
     <main class="logo">
         <img src="./main-page/Images/PPT ELEMENTOS-02.png" alt="">
     </main>
     <footer>
-
         <button class="button-rules-info" popovertarget="rules" popovertargetaction="toggle">
             <img src="./main-page/Images/info.svg" alt="Icon.info" id="icon" />
         </button>
-
         <div id="rules" popover="manual">
             <ul class="container-rules">
                 <h1>REGLAS DEL JUEGO</h1>
@@ -44,15 +40,15 @@
                 </button>
             </ul>
         </div>
-
-        <section class="input-button"></section>
-        <form action="">
-            <input type="text" placeholder="NOMBRE DEL JUGADOR" class="input-player">
-        </form>
-        <div class="play-father">
-            <button value="button" onclick="playAudio.play(); location.href='./game.html'" class="play">PLAY</button>
+        <div class="input-button">
+            <form action="">
+                <input type="text" id="searchInput" placeholder="NOMBRE DEL JUGADOR" class="input-player">
+            </form>
+            <div class="play-father">
+                <button onclick="location.href='./game.html'" class="play">PLAY</button>
+            </div>
         </div>
-        </section>
+        
     </footer>
     <script src="./main-page/app.js"></script>
 </body>

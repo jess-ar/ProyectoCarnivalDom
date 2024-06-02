@@ -21,10 +21,10 @@ a{
 .controls{
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  margin-right: 8px;
   margin-left: 20px;
-  margin-right: 20px;
-  margin-top: -10px;
+  padding: 15px;
 }
 
 #icon{
@@ -108,14 +108,100 @@ p, h1{
 .hands{
   height: auto;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -10%;
+}
+
+.leftHand{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: leftHands_move 1.5s linear 5;
+}
+
+.rightHand{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rightHands_move 1.5s linear 5;
+}
+
+@keyframes leftHands_move {
+  0% {background-image: url(/game-page/img/PPT\ ELEMENTOS-piedra\ izq.png);background-size: 100%;}
+  33% {background-image: url(/game-page/img/PPT\ ELEMENTOS-papel\ izq.png);background-size: 100%;}
+  66% {background-image: url(/game-page/img/PPT\ ELEMENTOS-tijera\ izq.png);background-size: 100%;}
+}
+
+@keyframes rightHands_move {
+  0% {background-image: url(/game-page/img/PPT\ ELEMENTOS-piedra\ der.png);background-size: 100%;}
+  33% {background-image: url(/game-page/img/PPT\ ELEMENTOS-papel\ der.png);background-size: 100%;}
+  66% {background-image: url(/game-page/img/PPT\ ELEMENTOS-tijera\ der.png);background-size: 100%;}
 }
 
 .start{
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  height: 250px;
+}
+
+.timer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: $yellow-color;
+  border: 5px solid $cream-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: $gradient-4;
+  font-size: 500px;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: bolder;
+  margin-top: 15%;
+}
+
+#time {
+  animation: countdown 5s linear infinite;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+@keyframes countdown {
+  from {
+    content: "5";
+  }
+  20% {
+    content: "4";
+  }
+  40% {
+    content: '3';
+  }
+  60% {
+    content: '2';
+  }
+  80% {
+    content: '1';
+  }
+  to {
+    content: '0';
+  }
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .player-name{
@@ -128,14 +214,23 @@ p, h1{
   background-color:$blue-color; 
 }
 
+button:active {
+  transform: scale(0.95);
+}
+
+.selector img {
+  width: 95%;
+  height: auto;
+}
+
 .selectsUser {
   display: flex;
   justify-content: center;
   gap: 19px;
-  margin-top: -70px; 
+  margin-top: -5%;
 }
 
-.result, .time{
+.result {
   display: flex;
   justify-content: center;
   font-size: 150px;
@@ -169,22 +264,12 @@ p, h1{
   color:$dark-blue-color;
   font-weight: bold;
 }
+
+.close:active, .sound:active {
+  transform: scale(0.95);
+}
   
-.rules{
-  margin: 35px;
-}
 
-.cerrarppv{
-  margin-top: 30px;
-  margin-left: 300px;
-}
-
-#effect {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-}
 /*.tiempo{ //es para un radio de desenfoque
   border-radius:50%;
   text-shadow:
