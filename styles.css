@@ -94,7 +94,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 11rem; /* Convertido de 176px a 11rem */
+  height: 11rem;
 }
 
 .input-button {
@@ -113,9 +113,9 @@ form {
 
 .input-player {
   text-align: center;
-  font-size: 1.25rem; /* Aproximadamente 20px */
-  width: 20rem; /* Aproximadamente 274px */
-  height: 2.5rem; /* Aproximadamente 41px */
+  font-size: 1.25rem;
+  width: 20rem;
+  height: 2.5rem;
   background-color: #EED0B2;
   border: #F6A347 3px solid;
   border-radius: 32px;
@@ -136,7 +136,7 @@ form {
 }
 
 .play-father:hover {
-  background-color: #f6bc7a;
+  background-color: #EED0B2;
   cursor: pointer;
 }
 
@@ -172,8 +172,8 @@ footer {
   color: #9614B5;
   font-size: 32px;
   padding: 40px;
-  margin-left: auto; /* Centra el botón horizontalmente */
-  margin-right: auto; /* Centra el botón horizontalmente */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #rules {
@@ -182,33 +182,40 @@ footer {
 }
 
 .button-rules-info {
-  width: 3.2rem; /* Aproximadamente 50px */
-  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
   background-color: #F6A347;
   border-radius: 50px;
-  border: 0.2rem solid #EED0B2;
+  border: 2px solid #EED0B2;
   cursor: pointer;
-  margin-left: 6%;
+  margin-left: 42px;
 }
 
-#icon {
-  width: 2rem; /* Ajusta el tamaño según tus necesidades */
-  height: 2rem;
+.button-rules-info img {
+  width: 30px;
+  height: 30px;
+}
+
+.controls-buttons i {
+  display: flex;
 }
 
 .container-rules {
-  /*  container caja de reglas */
-  height: 176px;
-  width: 450px;
-  height: 260px;
+  width: 75%;
+  height: 46%;
   padding: 30px;
   background-color: #EED0B2;
   border: 2px solid #F6A347;
   border-radius: 20px;
+  margin-left: 12%;
+  margin-top: 5%;
 }
 
 h1 {
-  /*  REGLAS DEL JUEGO */
   font-family: "Luckiest Guy", sans-serif;
   font-size: 35px;
   text-transform: uppercase;
@@ -236,22 +243,20 @@ li {
 .button-rules-x {
   display: flex;
   justify-content: center;
-  align-items: center; /* Centra verticalmente el contenido */
-  margin-left: auto; /* Centra el botón horizontalmente */
-  margin-right: auto; /* Centra el botón horizontalmente */
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
   width: 50px;
   height: 50px;
   background-color: #F6A347;
   color: #010A74;
   border-radius: 50px;
-  border: 2px solid #EED0B2; /* Borde de color crema */
+  border: 2px solid #EED0B2;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  outline: none; /* Elimina el contorno al enfocarse */
-  /* Ajusta la altura de la línea para centrar verticalmente el texto */
+  cursor: pointer;
+  outline: none;
   line-height: 10px;
-  /* Estilo de texto */
   font-size: 20px;
   font-weight: bold;
   text-align: center;

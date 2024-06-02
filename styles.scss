@@ -15,7 +15,7 @@ html {
 }
 
 i {
-    color: #010A74;
+    color: $dark-blue-color;
 }
 
 .controls {
@@ -34,15 +34,13 @@ i {
     width: 3.2rem; /* Aproximadamente 50px */
     height: 3.2rem; /* Aproximadamente 50px */
     font-size: 1.5rem; /* Aproximadamente 21px */
-    background-color: #F6A347;
+    background-color: $yellow-color;
     border-radius: 50%;
     padding: 1rem; /* Aproximadamente 10px */
     margin: 0;
-    border: 0.2rem solid #EED0B2; /* Aproximadamente 3px */
+    border: 0.2rem solid $cream-color; /* Aproximadamente 3px */
     cursor: pointer;
 } 
-
-
 
 .hidden {
     opacity: 0;
@@ -58,13 +56,11 @@ img {
     height: auto;
 }
 
-
-
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 11rem; /* Convertido de 176px a 11rem */
+    height: 11rem; 
 }
 
 .input-button {
@@ -83,32 +79,31 @@ form {
 
 .input-player {
     text-align: center;
-    font-size: 1.25rem; /* Aproximadamente 20px */
-    width: 20rem; /* Aproximadamente 274px */
-    height: 2.5rem; /* Aproximadamente 41px */
-    background-color: #EED0B2;
-    border: #F6A347 3px solid;
+    font-size: 1.25rem; 
+    width: 20rem; 
+    height: 2.5rem; 
+    background-color: $cream-color;
+    border: $yellow-color 3px solid;
     border-radius: 32px;
 }
 
 .input-player::placeholder{
-    color: #9614B5;
+    color: $purple-color;
 }
 
 .play-father {
     text-align: center;
-    background-color: #F6A347;
+    background-color: $yellow-color;
     border-radius: 30px;
-    border: #EED0B2 3px solid;
+    border: $cream-color 3px solid;
     width: 8rem ;
     height: 2.5rem;
     margin-right: 150px;
 }
 
 .play-father:hover {
-    background-color: #f6bc7a;
+    background-color: $cream-color;
     cursor: pointer;
-
 }
 
 .play {
@@ -119,7 +114,7 @@ form {
     background: linear-gradient(#EB1A7E,#010A74);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1.5px #F6A347;
+    -webkit-text-stroke: 1.5px $yellow-color;
     filter: drop-shadow(3px 2px 4px #00000091);
 }
 
@@ -144,43 +139,49 @@ footer {
     color: $purple-color;
     font-size: 32px;
     padding: 40px;
-    margin-left: auto; /* Centra el botón horizontalmente */
-    margin-right: auto; /* Centra el botón horizontalmente */
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
-#rules { 
+#rules {
     border: none;
     background-color: transparent; /*  esto es porque me salia un fondo blanco con un borde negro detrás del container-rules  */
 }
 
 .button-rules-info {
-    width: 3.2rem; /* Aproximadamente 50px */
-    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 50px;
     background-color: $yellow-color;
     border-radius: 50px;
-    border: 0.2rem solid $cream-color;
+    border: 2px solid $cream-color;
     cursor: pointer;
-    margin-left: 6%;
+    margin-left: 42px;
 }
 
-#icon {
-    width: 2rem; /* Ajusta el tamaño según tus necesidades */
-    height: 2rem;
+.button-rules-info img {
+    width: 30px;
+    height: 30px;
 }
 
+.controls-buttons i {
+    display: flex;
+}
 .container-rules {
-    /*  container caja de reglas */
-    height: 176px;
-    width: 450px;
-    height: 260px;
+    width: 75%;
+    height: 46%;
     padding: 30px;
     background-color: $cream-color;
     border: 2px solid $yellow-color;
     border-radius: 20px;
+    margin-left: 12%;
+    margin-top: 5%;
 }
 
 h1 {
-    /*  REGLAS DEL JUEGO */
     @include text-style-1;
     display: flex;
     justify-content: center;
@@ -196,25 +197,26 @@ li {
 .button-rules-x {
     display: flex;
     justify-content: center;
-    align-items: center; /* Centra verticalmente el contenido */
-    margin-left: auto; /* Centra el botón horizontalmente */
-    margin-right: auto; /* Centra el botón horizontalmente */
+    align-items: center; 
+
+    margin-left: auto; 
+    margin-right: auto; 
     margin-top: 10px;
+
     width: 50px;
     height: 50px;
+
     background-color: $yellow-color;
     color: $dark-blue-color;
     border-radius: 50px;
-    border: 2px solid $cream-color; /* Borde de color crema */
+    border: 2px solid $cream-color; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    outline: none; /* Elimina el contorno al enfocarse */
-
-    /* Ajusta la altura de la línea para centrar verticalmente el texto */
+    cursor: pointer; 
+    outline: none;
     line-height: 10px;
 
-    /* Estilo de texto */
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
+
