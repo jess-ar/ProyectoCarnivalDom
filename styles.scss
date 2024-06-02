@@ -19,14 +19,16 @@ html{
     background-repeat: no-repeat;
 }
 a{
-    color: #010A74;
+    color: $dark-blue-color;
 }
 .controls{
     display: flex;
-    justify-content: space-around;
-    gap: 600px;
+    justify-content: space-between;
+    //gap: 600px;
     align-items: center;
-    margin-top: 20px;
+    margin-right: 8px;
+    margin-left: 20px;
+    padding: 15px;
 }
 
 .controls-buttons{
@@ -36,11 +38,11 @@ a{
     width: 50px;
     height: 50px;
     font-size: 21px;
-    background-color: #F6A347;
+    background-color: $yellow-color;
     border-radius: 50%;
     padding: 10px;
     margin: 0px;
-    border: #EED0B2 3px solid;
+    border: $cream-color 3px solid;
     cursor: pointer;
 
 } 
@@ -49,7 +51,7 @@ a{
     pointer-events: none;
 } 
 .button:active {
-    transform: scale(1.1);
+    transform: scale(1.5);
 } 
 
 img{
@@ -57,7 +59,7 @@ img{
     height: auto;
 }
 .logo{
-    margin-top: 30px;
+    margin-top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +69,10 @@ footer{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin-right: 50px;
 }
 .info{
     width: 5%;
@@ -75,28 +81,35 @@ footer{
     display: flex;
 }
 .input-button{
-    width: 90%;
+    width: 60%;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    //*justify-content:space-around;
+    //*gap: 10px;
+    margin-bottom: 20px;
 }
 
 form{
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: -50px;
+    margin-left: -10%;
 }
+
 .input-player{
     text-align: center;
     font-size: 20px;
     width: 274px;
     height: 41px;
     display: flex;
-    background-color: #EED0B2;
-    border: #F6A347 3px solid;
+    background-color:$cream-color;
+    border: $yellow-color 3px solid;
     border-radius: 32px;
+    margin: 0 auto;
 }
 .input-player::placeholder{
-    color: #9614B5;
+    color: $purple-color;
 }
 
 .play-father{
@@ -104,14 +117,15 @@ form{
     display: block;
     align-items: center;
     text-align: center;
-    background-color: #F6A347;
+    background-color: $yellow-color;
     border-radius: 30px;
-    border: #EED0B2 3px solid;
-    width: 123px ;
+    border: $cream-color 3px solid;
+    width: 160px ;
     height:41px;
+    margin: 0 auto;
 }
 .play-father:hover{
-    background-color: #f6bc7a;
+    background-color:$cream-color;
     cursor: pointer;
 
 }
@@ -119,7 +133,7 @@ form{
     padding-bottom: 15px;
     border:none;
     flex: 1;
-    flex-grow: 1;
+//    flex-grow: 1;
     align-items: center;
     font-size: 32px;
     border-radius: 20px;
@@ -148,7 +162,6 @@ form{
 }
 
 #rules {
-    
     border: none;
     background-color: transparent; /*  esto es porque me salia un fondo blanco con un borde negro detrás del container-rules  */
 }
@@ -164,10 +177,11 @@ form{
     border-radius: 50px;
     border: 2px solid $cream-color;
     cursor: pointer;
+    margin: 15px;
     /* para que el svg se ajuste al tamaño del botón */
     svg {
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
     }
 }
 
@@ -180,6 +194,10 @@ form{
     background-color: $cream-color;
     border: 2px solid $yellow-color;
     border-radius: 20px;
+    margin-left: 15%;
+    margin-top: 5%;
+
+    
 }
 
 h1 {
@@ -208,7 +226,7 @@ li {
     background-color: $yellow-color;
     color: $dark-blue-color;
     border-radius: 50px;
-    border: 2px solid $cream-color; /* Borde de color crema */
+    border: 2px solid $cream-color; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     outline: none; /* Elimina el contorno al enfocarse */
@@ -224,12 +242,12 @@ li {
 
 
 
-.button-rules-info {
+/*.button-rules-info {
     width: 50px; /* Default width */
-    position: relative;
+    /*position: relative;
     left: auto;
     margin-left: auto;
     margin-right: auto;
-}
+}*/
 
 

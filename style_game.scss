@@ -203,7 +203,7 @@ p, h1{
   background-color:$blue-color; 
 }
 
-button:active, {
+button:active {
   transform: scale(0.95);
 }
 
@@ -219,7 +219,7 @@ button:active, {
   margin-top: -30px;
 }
 
-.result, {
+.result {
   display: flex;
   justify-content: center;
   font-size: 150px;
