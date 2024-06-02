@@ -105,25 +105,40 @@ p, h1{
 }
 
 .hands{
+  height: auto;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.left{
-  height: 35%;
-  width: 35%;
-  display: flex;
-  justify-content: start;
-  margin-top: 20px;
+.leftHand{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: leftHands_move 1.5s linear 5;
 }
 
-.rigth{
-  height: 35%;
-  width: 35%;
-  display: flex;
-  justify-content: end;
-  margin-top: 20px;
+.rightHand{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rightHands_move 1.5s linear 5;
+}
+
+@keyframes leftHands_move {
+  0% {background-image: url(/game-page/img/PPT\ ELEMENTOS-piedra\ izq.png);background-size: 100%;}
+  33% {background-image: url(/game-page/img/PPT\ ELEMENTOS-papel\ izq.png);background-size: 100%;}
+  66% {background-image: url(/game-page/img/PPT\ ELEMENTOS-tijera\ izq.png);background-size: 100%;}
+}
+
+@keyframes rightHands_move {
+  0% {background-image: url(/game-page/img/PPT\ ELEMENTOS-piedra\ der.png);background-size: 100%;}
+  33% {background-image: url(/game-page/img/PPT\ ELEMENTOS-papel\ der.png);background-size: 100%;}
+  66% {background-image: url(/game-page/img/PPT\ ELEMENTOS-tijera\ der.png);background-size: 100%;}
 }
 
 .start{
