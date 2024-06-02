@@ -1,122 +1,120 @@
 @import "style2.scss";
 
-*{
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
-    font-style: normal;
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-}
-html{
-    width: 100%;
-    height: 100%;
-}
-.bg{
+
+html {
     width: 100%;
     height: auto;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
     background-image: url(./main-page/Images/PPT_ELEMENTOS-01-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
-a{
+
+i {
     color: #010A74;
 }
-.controls{
+
+.controls {
     display: flex;
     justify-content: space-around;
     gap: 65%;
     align-items: center;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
-.controls-buttons{
+.controls-buttons {
     text-align: center;
-    display: inline-block;
+    display: flex;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    font-size: 21px;
+    justify-content: center; /* Añadido para centrar el contenido */
+    width: 3.2rem; /* Aproximadamente 50px */
+    height: 3.2rem; /* Aproximadamente 50px */
+    font-size: 1.5rem; /* Aproximadamente 21px */
     background-color: #F6A347;
     border-radius: 50%;
-    padding: 10px;
-    margin: 0px;
-    border: #EED0B2 3px solid;
+    padding: 1rem; /* Aproximadamente 10px */
+    margin: 0;
+    border: 0.2rem solid #EED0B2; /* Aproximadamente 3px */
     cursor: pointer;
-
 } 
+
+
+
 .hidden {
     opacity: 0;
     pointer-events: none;
 } 
+
 .button:active {
     transform: scale(1.1);
 } 
 
-img{
+img {
     width: 45%;
     height: auto;
 }
-.logo{
-    margin-top: 30px;
+
+
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 176px;
+    height: 11rem; /* Convertido de 176px a 11rem */
 }
 
-.info{
-    width: 5%;
-    margin-left: 30px;
-    /* margin-right: 120px; */
-    display: flex;
-}
-.input-button{
+.input-button {
     width: 10%;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-form{
+form {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 2%;
 }
-.input-player{
+
+.input-player {
     text-align: center;
-    font-size: 20px;
-    width: 274px;
-    height: 41px;
-    display: flex;
+    font-size: 1.25rem; /* Aproximadamente 20px */
+    width: 20rem; /* Aproximadamente 274px */
+    height: 2.5rem; /* Aproximadamente 41px */
     background-color: #EED0B2;
     border: #F6A347 3px solid;
     border-radius: 32px;
 }
+
 .input-player::placeholder{
     color: #9614B5;
 }
 
-.play-father{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.play-father {
+    text-align: center;
     background-color: #F6A347;
     border-radius: 30px;
     border: #EED0B2 3px solid;
-    width: 123px ;
-    height:41px;
+    width: 8rem ;
+    height: 2.5rem;
     margin-right: 150px;
 }
-.play-father:hover{
+
+.play-father:hover {
     background-color: #f6bc7a;
     cursor: pointer;
 
 }
-.play{
+
+.play {
     border:none;
     align-items: center;
+    text-align: center;
     font-size: 32px;
     background: linear-gradient(#EB1A7E,#010A74);
     -webkit-background-clip: text;
@@ -124,10 +122,10 @@ form{
     -webkit-text-stroke: 1.5px #F6A347;
     filter: drop-shadow(3px 2px 4px #00000091);
 }
-.play:hover{
+
+.play:hover {
     cursor: pointer;
 }
-
 
 footer {
     width: 100%;
@@ -135,8 +133,6 @@ footer {
     flex-direction: row;
     align-items: center;
 }
-
-
 
 /* popover */
 
@@ -152,28 +148,24 @@ footer {
     margin-right: auto; /* Centra el botón horizontalmente */
 }
 
-#rules {
-    
+#rules { 
     border: none;
     background-color: transparent; /*  esto es porque me salia un fondo blanco con un borde negro detrás del container-rules  */
 }
 
 .button-rules-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50px;
-    height: 50px;
+    width: 3.2rem; /* Aproximadamente 50px */
+    height: 3.2rem;
     background-color: $yellow-color;
     border-radius: 50px;
-    border: 2px solid $cream-color;
+    border: 0.2rem solid $cream-color;
     cursor: pointer;
-    /* para que el svg se ajuste al tamaño del botón */
-    svg {
-        width: 80%;
-        height: 80%;
-    }
+    margin-left: 6%;
+}
+
+#icon {
+    width: 2rem; /* Ajusta el tamaño según tus necesidades */
+    height: 2rem;
 }
 
 .container-rules {
@@ -226,15 +218,3 @@ li {
     font-weight: bold;
     text-align: center;
 }
-
-
-
-.button-rules-info {
-    width: 50px; /* Default width */
-    position: relative;
-    left: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
