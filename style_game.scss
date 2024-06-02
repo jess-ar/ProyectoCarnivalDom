@@ -21,10 +21,10 @@ a{
 .controls{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-right: 8px;
   margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  margin-top: -40px;
+  padding: 15px;
 }
 
 #icon{
@@ -109,6 +109,7 @@ p, h1{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: -10%;
 }
 
 .leftHand{
@@ -162,7 +163,7 @@ p, h1{
   font-size: 500px;
   font-family: "Luckiest Guy", cursive;
   font-weight: bolder;
-  margin-top: -20px;
+  margin-top: 15%;
 }
 
 #time {
@@ -231,7 +232,7 @@ button:active {
   display: flex;
   justify-content: center;
   gap: 19px;
-  margin-top: -30px;
+  margin-top: -5%;
 }
 
 .result {
