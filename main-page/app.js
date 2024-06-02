@@ -15,12 +15,12 @@ music.onloadeddata = function(){
 function playPause(){
     if(music.paused){
         music.play();
-        ctrlIcon.classList.remove('fa-volume-off')
+        ctrlIcon.classList.remove('fa-volume-xmark')
         ctrlIcon.classList.add('fa-volume-high')
     }else{
         music.pause();
         ctrlIcon.classList.remove('fa-volume-high')
-        ctrlIcon.classList.add('fa-volume-off')
+        ctrlIcon.classList.add('fa-volume-xmark')
     }
 }
 music.addEventListener('timeupdate', function(){
@@ -30,7 +30,7 @@ progress.oninput = function(){
     music.currentTime = progress.value;
     if(music.paused){
         music.play();
-        ctrlIcon.classList.remove('fa-volume-off')
+        ctrlIcon.classList.remove('fa-volume-xmark')
         ctrlIcon.classList.add('fa-volume-high')
     }
 }
@@ -44,9 +44,6 @@ if (exit == true){
 } else{
     console.log("No se cierra el juego")
 }
-
-// let value = document.getElementById('searchInput').value;
-// let nombre = document.getElementsByClassName('play')
 
 function namePlayer(){
     var namePlayer= document.getElementById('searchInput').value;
