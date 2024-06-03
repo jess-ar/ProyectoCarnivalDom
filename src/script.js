@@ -14,58 +14,63 @@ function game(opUsuario){
     if(contUser < 2 && contOrdi < 2){
     if (opcionUsuario !== ordi){
     if(opcionUsuario == 0 && ordi == 2){    //el usuario escogió piedra 
-        contUser++
-        document.getElementById("scoreUser").innerHTML = contUser;
-        document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
-    counter();
-    }
+    contUser++
+    document.getElementById("scoreUser").innerHTML = contUser;
+    console.log("SeleccionUsuario piedra:",opcionUsuario)
+    console.log("SeleccionMaquina:",ordi)
+    console.log("Usuario:",contUser)
+    console.log("Maquina:",contOrdi)
+    document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
+}
        else if(opcionUsuario == 1 && ordi == 0){    //el usuario escogió papel
         contUser++
         document.getElementById("scoreUser").innerHTML = contUser;
+        console.log("SeleccionUsuario papel:",opcionUsuario)
+        console.log("SeleccionMaquina:",ordi)
+        console.log("Usuario:",contUser)
+        console.log("Maquina:",contOrdi)
         document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
-        counter();
     }
         else if(opcionUsuario == 2 && ordi == 1){    //el usuario escogió tijeras
             contUser++
             document.getElementById("scoreUser").innerHTML = contUser;
+            console.log("SeleccionUsuario tijeras:",opcionUsuario)
+            console.log("SeleccionMaquina:",ordi)
+            console.log("Usuario:",contUser)
+            console.log("Maquina:",contOrdi)
             document.getElementById('effect').innerHTML ='<h1>¡Ganaste la vuelta!</h1> La maquina eligio '+ opciones[ordi];
-            counter();
-        }
-        else{contOrdi++
+           }
+           else{contOrdi++
             document.getElementById("scoreComputer").innerHTML = contOrdi;
+            console.log("SeleccionUsuario:",opcionUsuario)
+            console.log("SeleccionMaquina:",ordi)
+            console.log("Usuario:",contUser)
+            console.log("Maquina:",contOrdi)
             document.getElementById('effect').innerHTML ='<h1>¡Perdiste!</h1> La maquina eligio '+ opciones[ordi];
-            counter(); 
         }
     }
     else{
-
-            document.getElementById('effect').innerHTML ="<h1>¡Empate!</h1> Ambos eligieron "+ opciones[ordi];
+        console.log("SeleccionUsuario:",opcionUsuario)
+        console.log("SeleccionMaquina:",ordi)
+        window.alert("Empate!,vuelve a jugar!");
+        console.log(opciones[ordi])
+        document.getElementById('effect').innerHTML ="<h1>¡Empate!</h1> Ambos eligieron "+ opciones[ordi];
     }
 
+} else{
+   // window.alert("El juego ha terminado");
+     var resultado = window.confirm('El juego ha terminado');
+    if (resultado === true && contUser===2) {
+        window.alert('Ganaste!!');
+    }else { 
+        window.alert('Has perdido');
+        }
 }
 document.getElementById('effect').style.display = "";
 }
 
 function removeEffect() {
     document.getElementById('effect').style.display = "none";
-}
-
-function reset() {
-    contUser=0;
-    document.getElementById("scoreUser").innerHTML = contUser;
-    contOrdi=0;
-    document.getElementById("scoreComputer").innerHTML = contOrdi
-}
-
-function counter(){
-        if (contUser == 2 ) {
-        document.getElementById('effect').innerHTML ="<h1>¡GANASTE!</h1>" + "Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
-        reset();
-    }
-    else if (contOrdi == 2 ) {
-        document.getElementById('effect').innerHTML ="<h1>¡PERDISTE!</h1>" +"Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
-        reset();
-    }
 }
 
 //*timer*//
@@ -82,7 +87,7 @@ const startTimer = () => {
     timeLeft-=1
 
     if (timeLeft<0) {
-        windowe.alert("Perdiste el turno");
+        window.alert("Perdiste el turno");
         hideTimer();
         score();
         timeLeft = 5;
