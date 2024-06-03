@@ -66,7 +66,6 @@ const startTimer = () => {
     timeLeft-=1
 
     if (timeLeft<0) {
-        //window.alert("Perdiste el turno");
         hideTimer();
         score();
         counter();

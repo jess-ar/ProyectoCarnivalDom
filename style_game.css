@@ -334,13 +334,13 @@ button:active {
   gap: 100px;
 }
 
-.close, .sound, .reset, .home, .rules {
+.close {
   background-color: #F6A347;
   color: #010A74;
   font-weight: bold;
 }
 
-.close:active, .sound:active {
+.close:active {
   transform: scale(0.95);
 }
 

@@ -24,7 +24,6 @@ i{
 .controls{
     display: flex;
     justify-content: space-between;
-    //gap: 600px;
     align-items: center;
     margin-right: 8px;
     margin-left: 20px;
@@ -96,14 +95,12 @@ footer{
 .info{
     width: 5%;
     margin-left: 30px;
-    /* margin-right: 120px; */
     display: flex;
 }
 .input-button{
     width: 55%;
     display: flex;
     justify-content:space-around;
-    //gap: 10px;
     margin-bottom: 20px;
     margin-right: 155px;
 }
@@ -153,7 +150,6 @@ form{
     padding-bottom: 15px;
     border:none;
     flex: 1;
-//    flex-grow: 1;
     align-items: center;
     font-size: 32px;
     border-radius: 20px;
@@ -177,13 +173,13 @@ form{
     color: $purple-color;
     font-size: 32px;
     padding: 40px;
-    margin-left: auto; /* Centra el botón horizontalmente */
-    margin-right: auto; /* Centra el botón horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #rules {
     border: none;
-    background-color: transparent; /*  esto es porque me salia un fondo blanco con un borde negro detrás del container-rules  */
+    background-color: transparent;
 }
 
 .button-rules-info {
@@ -198,7 +194,6 @@ form{
     border: 2px solid $cream-color;
     cursor: pointer;
     margin: 15px;
-    /* para que el svg se ajuste al tamaño del botón */
     svg {
         width: 90%;
         height: 90%;
@@ -237,9 +232,9 @@ li {
 .button-rules-x {
     display: flex;
     justify-content: center;
-    align-items: center; /* Centra verticalmente el contenido */
-    margin-left: auto; /* Centra el botón horizontalmente */
-    margin-right: auto; /* Centra el botón horizontalmente */
+    align-items: center;
+    margin-left: auto; 
+    margin-right: auto; 
     margin-top: 10px;
     width: 50px;
     height: 50px;
@@ -248,10 +243,8 @@ li {
     border-radius: 50px;
     border: 2px solid $cream-color; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    outline: none; /* Elimina el contorno al enfocarse */
-
-    /* Ajusta la altura de la línea para centrar verticalmente el texto */
+    cursor: pointer;
+    outline: none; 
     line-height: 10px;
 
     /* Estilo de texto */
@@ -263,15 +256,6 @@ li {
 .transformed{
     transform: rotate(180deg);
 }
-
-/*.button-rules-info {
-    width: 50px; /* Default width */
-    /*position: relative;
-    left: auto;
-    margin-left: auto;
-    margin-right: auto;
-}*/
-
 
 @media (min-width: 846px) and (max-width: 1380px){
 .bg{
