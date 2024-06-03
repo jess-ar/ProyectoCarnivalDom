@@ -354,10 +354,25 @@ li {
     margin-left: auto;
     margin-right: auto;
 }*/
-@media (min-width: 846px) and (max-width: 1025px) {
+@media (min-width: 846px) and (max-width: 1380px) {
   .bg {
     background-image: url(./main-page/Images/PPT\ ELEMENTOS-01.png);
     background-repeat: no-repeat;
+  }
+  .button-rules-info {
+    margin-top: 25%;
+  }
+  .container-rules {
+    margin-top: 50%;
+  }
+  .logo {
+    margin-top: 20%;
+  }
+  .input-button {
+    margin-right: 400px;
+  }
+  .input-player {
+    margin-right: 70px;
   }
 }
 
