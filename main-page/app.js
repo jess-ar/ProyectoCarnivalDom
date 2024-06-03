@@ -1,6 +1,6 @@
 function closeGame(){
     let closeGame = window.close();
-    let cerrar = document.getElementsByClassName('fa-solid fa-xmark')
+    let cerrar = document.getElementsByClassName('fa-solid fa-arrow-right-from-bracket transformed')
 }
 
 // music

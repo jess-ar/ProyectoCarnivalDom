@@ -343,13 +343,21 @@ button:active {
   transform: scale(0.95);
 }
 
-/*.tiempo{ //es para un radio de desenfoque
-  border-radius:50%;
-  text-shadow:
-  3px 3px 2px #EED0B2,
-  -3px 3px 2px #EED0B2,
-  -3px -3px 0 #EED0B2,
-  3px -3px 0 #EED0B2,
-  } */
+@media only screen and (max-width: 1025px) {
+  .bg {
+    background-image: url(./main-page/Images/PPT\ ELEMENTOS-01.png);
+    background-repeat: no-repeat;
+  }
+  .selector {
+    margin-top: 32%;
+  }
+  .timer {
+    margin-top: -20px;
+  }
+  .hands {
+    margin-top: 10%;
+    margin-bottom: -25%;
+  }
+}
 
 /*# sourceMappingURL=style_game.css.map */
