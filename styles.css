@@ -76,7 +76,7 @@ html {
   background-repeat: no-repeat;
 }
 
-a {
+i {
   color: #010A74;
 }
 
@@ -126,6 +126,37 @@ img {
   height: 176px;
 }
 
+.logo img {
+  animation: bounce 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
 footer {
   width: 100%;
   display: flex;
@@ -144,9 +175,11 @@ footer {
 }
 
 .input-button {
-  width: 60%;
+  width: 55%;
   display: flex;
+  justify-content: space-around;
   margin-bottom: 20px;
+  margin-right: 155px;
 }
 
 form {
@@ -182,7 +215,7 @@ form {
   background-color: #F6A347;
   border-radius: 30px;
   border: #EED0B2 3px solid;
-  width: 160px;
+  width: 130px;
   height: 41px;
   margin: 0 auto;
 }
@@ -310,6 +343,10 @@ li {
   text-align: center;
 }
 
+.transformed {
+  transform: rotate(180deg);
+}
+
 /*.button-rules-info {
     width: 50px; /* Default width */
 /*position: relative;
@@ -321,16 +358,6 @@ li {
   .bg {
     background-image: url(./main-page/Images/PPT\ ELEMENTOS-01.png);
     background-repeat: no-repeat;
-  }
-  .selector {
-    margin-top: 32%;
-  }
-  .timer {
-    margin-top: -20px;
-  }
-  .hands {
-    margin-top: 10%;
-    margin-bottom: -25%;
   }
 }
 

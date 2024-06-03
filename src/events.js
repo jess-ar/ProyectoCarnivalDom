@@ -1,8 +1,5 @@
 import { game, removeEffect} from './script.js'
 
-/*let tempBoton = document.getElementById("play");
-tempBoton.addEventListener("click", timmer)*/
-
 let piedraButton = document.getElementById("0");
 piedraButton.addEventListener("click", function(){game(0)})
 let papelButton = document.getElementById("1");

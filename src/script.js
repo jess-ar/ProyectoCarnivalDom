@@ -66,30 +66,21 @@ const startTimer = () => {
     timeLeft-=1
 
     if (timeLeft<0) {
-        window.alert("Perdiste el turno");
+        //window.alert("Perdiste el turno");
         hideTimer();
         score();
+        counter();
         timeLeft = 5;
         clearInterval(countdown)
     
     }
 
-    /*countdown = setInterval(() => {
-        if (timeLeft <= 0) {
-           //*window.alert("Perdiste el turno");
-            hideTimer();
-            
-        } else {
-            timeLeft -= 1;
-            updateTimeDisplay();
-        }
-    }, 1000);
-    console.log (timeLeft)*/
 };
 
 const score = () => {
     contOrdi++
-        document.getElementById("scoreComputer").innerHTML = contOrdi;
+        document.getElementById("scoreComputer").innerHTML = contOrdi;      
+    
 }
 
 const hideTimer = () => {
@@ -125,11 +116,11 @@ function reset() {
 
 function counter(){
         if (contUser == 2 ) {
-        document.getElementById('effect').innerHTML ="<h1>¡GANASTE!</h1>" + "Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
+        document.getElementById('effect').innerHTML ="<h1>¡GANASTE!</h1>" + "Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "Has click para volver a jugar";
         reset();  
     }
     else if (contOrdi == 2 ) {
-        document.getElementById('effect').innerHTML ="<h1>¡PERDISTE!</h1>" +"Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "¿Quieres volver a jugar?";
+        document.getElementById('effect').innerHTML ="<h1>¡PERDISTE!</h1>" +"Puntaje Ordenador: " + contOrdi + "<br></br>" + "Tu puntaje es: " + contUser + "<br></br>" + "Has click para volver a jugar";
         reset();  
     }    
 }

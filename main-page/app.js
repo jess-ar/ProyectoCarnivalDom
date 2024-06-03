@@ -18,7 +18,8 @@ function playPause(){
         ctrlIcon.classList.remove('fa-volume-xmark')
         ctrlIcon.classList.add('fa-volume-high')
     }else{
-        music.pause();
+        music.pause(); 
+        music.currentTime = 0;
         ctrlIcon.classList.remove('fa-volume-high')
         ctrlIcon.classList.add('fa-volume-xmark')
     }

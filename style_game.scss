@@ -25,6 +25,7 @@ a{
   margin-right: 8px;
   margin-left: 20px;
   padding: 15px;
+  margin-top: -40px;
 }
 
 #icon{
@@ -176,7 +177,7 @@ p, h1{
   font-size: 120px;
   color: white;
   transition: color 0.2s ease;
-  margin-top: -5%;
+  margin-top: -2%;
 }
 
 @keyframes countdown {
@@ -251,7 +252,7 @@ button:active {
 
 /*estilos footer*/
 
-[popover], #effect {
+[popover] {
   width: 727px;
   background: $cream-color;
   border-bottom: 5px solid $yellow-color;
@@ -277,6 +278,21 @@ button:active {
   transform: scale(0.95);
 }
   
+#effect {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: #F6A347;
+  font-size: 32px;
+  text-align: center;
+ 
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  padding: 100px;
+}
+
 @media (min-width: 846px) and (max-width: 1380px){
   .bg{
     background-image: url(./main-page/Images/PPT\ ELEMENTOS-01.png);
