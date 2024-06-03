@@ -343,7 +343,7 @@ button:active {
   transform: scale(0.95);
 }
 
-@media (min-width: 846px) and (max-width: 1025px) {
+@media (min-width: 846px) and (max-width: 1380px) {
   .bg {
     background-image: url(./main-page/Images/PPT\ ELEMENTOS-01.png);
     background-repeat: no-repeat;
